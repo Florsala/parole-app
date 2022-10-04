@@ -7,7 +7,7 @@ const NavBar = () => {
     <div>
       <div className="navbar">
         <div>
-          <img style={{ marginLeft: "3.375rem" }} src={logo} alt="logo" />
+          <img style={{ marginLeft: "5.375rem", width:"3.125rem" }} src={logo} alt="logo" />
           <img className="logo-parole" src={logo2} alt="parole" />
         </div>
 
