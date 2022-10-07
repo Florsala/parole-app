@@ -81,11 +81,14 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-        <div>
-          <img className="number-bcg" src={dots} alt="" />
-        </div>
-
+      <section
+        style={{
+          backgroundImage: `url(${dots})`,
+          marginTop: "49.75rem",
+          backgroundRepeat: "repeat",
+          height: "93.75rem",
+        }}
+      >
         <div className="container01">
           <div>
             <img
@@ -97,10 +100,8 @@ const Home = () => {
           </div>
 
           
-
           <div className="number-section_container">
-<p className="number-section"> 01.</p>
-
+          <p className="number-section"> 01.</p>
             <h5 className="number-section_title">
               Estamos enfocados en conectar con tus necesidades de staffing
             </h5>
@@ -119,17 +120,20 @@ const Home = () => {
 
         {/* segunda imagen */}
 
-        {/* <div>
-          <img
-            className="circle-img2"
-            src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-            alt="meeting"
-          />
-          <div className="out-circle2"></div>
+        <div className="container02">
+          <div>
+            <img
+              className="circle-img2"
+              src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              alt="meeting"
+            />
+            <div className="out-circle2"></div>
+          </div>
 
-          <div className="number-section2">02.</div>
+       
 
           <div className="number-section_container2">
+          <p className="number-section2">02.</p>
             <h5 className="number-section_title2">
               Somos expertos en comunicación y aplicación de Soft Skills{" "}
             </h5>
@@ -145,15 +149,11 @@ const Home = () => {
               maximización del potencial de los colaboradores.
             </p>
           </div>
-        </div> */}
+        </div>
 
         {/* tercera imagen */}
 
-       {/*  <section>
-          <div>
-            <img className="number-bcg3" src={dots} alt="dots" />
-          </div>
-
+        <div className="container03">
           <div>
             <img
               className="circle-img3"
@@ -162,11 +162,13 @@ const Home = () => {
             />
             <div className="out-circle3"></div>
 
-            <div className="number-section3">03.</div>
+            
 
             <div className="number-section_container3">
+            <p className="number-section3">03.</p>
               <h5 className="number-section_title3">
-                Nos especializamos en el Sector IT, con servicios 100% remotos{" "}
+                Nos especializamos en el <br /> Sector IT, con servicios 100%
+                remotos{" "}
               </h5>
 
               <img className="chevron-down3" src={down} alt="chevron" />
@@ -182,7 +184,11 @@ const Home = () => {
               </p>
             </div>
           </div>
-        </section> */}
+        </div>
+
+        <div>
+          <img className="btnpurple" src={btnpurple} alt="" />
+        </div>
       </section>
     </div>
   );
