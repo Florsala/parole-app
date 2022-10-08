@@ -4,6 +4,8 @@ import './App.css'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import Servicios from './components/Servicios'
+import Equipo from './components/Equipo'
+import Contacto from './components/Contacto'
 
 function App() {
 
@@ -12,6 +14,8 @@ function App() {
       <NavBar/>
       <Home/>
       <Servicios/>
+      <Equipo/>
+      <Contacto/>
       
 
 

@@ -1,9 +1,9 @@
 .Serv-title {
   font-weight: 700;
-  font-size: 4.375rem;
+  font-size: 3.75rem;
   line-height: 6.5625rem;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 }
 
 .Serv-container {
@@ -39,8 +39,8 @@
 }
 
 .Serv-box {
-  width: 31.4375rem;
-  height: 28.0625rem;
+  width: 28rem;
+  height:26rem;
   
   margin: 3rem;
   background: rgba(255, 255, 255, 0.8);
@@ -76,7 +76,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 26.5625rem;
+    width: 22rem;
     margin: 1.25rem auto;
     align-items: center;
 }
@@ -90,3 +90,62 @@
 
     }
    
+/* Prueba --- borrar si no funciona */
+
+    @keyframes bounceInDown {
+      from,
+      60%,
+      75%,
+      90%,
+      to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+    
+      0% {
+        opacity: 0;
+        transform: translate3d(0, -3000px, 0) scaleY(3);
+      }
+    
+      60% {
+        opacity: 1;
+        transform: translate3d(0, 25px, 0) scaleY(0.9);
+      }
+    
+      75% {
+        transform: translate3d(0, -10px, 0) scaleY(0.95);
+      }
+    
+      90% {
+        transform: translate3d(0, 5px, 0) scaleY(0.985);
+      }
+    
+      to {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    
+    .bounceInDown {
+      animation-name: bounceInDown;
+    }
+
+
+    /* hasta aca era la  Prueba --- borrar si no funciona */
+
+
+    .empresas-container {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: space-between;
+    }
+
+    .empresas-container img {
+      filter: grayscale(1);
+      object-fit: none;
+      cursor: pointer;
+
+    }
+
+    .empresas-container img:hover{
+      filter: none;
+    }

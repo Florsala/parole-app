@@ -1,6 +1,5 @@
 :root {
-
-
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -8,14 +7,8 @@
   -webkit-text-size-adjust: 100%;
 }
 
-
-
-
-
-
-
 @media (prefers-color-scheme: light) {
- /*  :root {
+  /*  :root {
     color: #213547;
     background-color: #ffffff;
   } */
