@@ -76,8 +76,6 @@ body {
   width: 8rem;
 }
 
-
-
 .nav-item {
   padding: 1rem;
   position: relative;
@@ -260,23 +258,12 @@ button:focus-visible {
 
 .btnpurple {
   display: flex;
-  /* margin: 0 auto; */
-  /* margin-top: -5rem; */
+ 
   cursor: pointer;
   width: 4.25rem;
-  position: absolute;
+ 
   margin: 0 auto;
-  left: 50%;
-
-  /* position: absolute;
-width: 79px;
-height: 79px;
-left: 739.82px;
-top: 567.88px;
-border-radius: 50%;
-
-background: #3A07F2;
-transform: rotate(89.82deg); */
+  
 }
 
 .btnpurple:hover {
@@ -371,7 +358,9 @@ transform: rotate(89.82deg); */
 
 /* seccion inicio 3era parte - numeros */
 
-.container01, .container02, .container03{
+.container01,
+.container02,
+.container03 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -391,16 +380,15 @@ transform: rotate(89.82deg); */
 .circle-img1 {
   width: 23.6875rem;
   height: 23.6875rem;
- 
+
   border-radius: 50%;
   object-fit: cover;
   opacity: 80%;
   z-index: 2;
 
-  border: double 0.9rem #f25757;
+  outline: 5px solid #f25757;
+  outline-offset: 5px;
 }
-
-
 
 .number-section {
   font-weight: 800;
@@ -413,11 +401,11 @@ transform: rotate(89.82deg); */
 
 .number-section_container {
   width: 32rem;
- 
+
   display: flex;
   flex-direction: column;
   align-items: center;
- 
+
   margin-left: 4.1875rem;
   position: relative;
 }
@@ -457,20 +445,9 @@ transform: rotate(89.82deg); */
   z-index: 2;
   transform: translate(38.9375rem, 0px);
 
-  border: double 0.9rem #f25757;
-/* 
-  border-radius: 50%;
-  object-fit: cover;
-  position: absolute;
-  width: 25.6875rem;
-  height: 25.6875rem;
-  left: 48.625rem;
-  top: 124.8125rem;
-  opacity: 80%;
-  z-index: 2; */
+  outline: 5px solid #f25757;
+  outline-offset: 5px;
 }
-
-
 
 .number-section2 {
   font-weight: 800;
@@ -519,27 +496,24 @@ transform: rotate(89.82deg); */
 
 /* tercera imagen */
 
-
-
 .circle-img3 {
   width: 23.6875rem;
   height: 23.6875rem;
- 
+
   border-radius: 50%;
   object-fit: cover;
   opacity: 80%;
   z-index: 2;
 
-  border: double 0.9rem #f25757;
+  outline: 5px solid #f25757;
+  outline-offset: 5px;
 }
 
 .out-circle3 {
- 
   height: 24.9375rem;
- 
 }
 
-.number-section_container3{
+.number-section_container3 {
   width: 36rem;
   display: flex;
   flex-direction: column;
@@ -547,10 +521,9 @@ transform: rotate(89.82deg); */
   margin-left: 30.1875rem;
   position: relative;
   top: -50rem;
-
 }
 
-.number-section_title3{
+.number-section_title3 {
   font-weight: 600;
   font-size: 1.875rem;
   line-height: 2.1875rem;
@@ -568,22 +541,19 @@ transform: rotate(89.82deg); */
   color: #000000;
 }
 
-.chevron-down3{
-  
+.chevron-down3 {
   width: 3.9375rem;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
 }
 
-.number-section3{
+.number-section3 {
   font-weight: 800;
   font-size: 12.5rem;
   line-height: 18.75rem;
   color: var(--paleLila-color);
   transform: translate(-249px, -6.75rem);
-    position: absolute;
-
+  position: absolute;
 }
-
 
 @media screen and (max-width: 940px) {
   html,

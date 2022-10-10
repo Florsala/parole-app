@@ -1,0 +1,31 @@
+.Ct-container{
+    position: relative;
+    height: 9.5rem;
+    margin-top: 9rem;
+    margin-left: 3rem;
+}
+
+.Ct-circle-pink{
+ position: absolute;
+ width: 5rem;
+ height: 5rem;
+ background: var(--pale-pink);
+ border-radius: 50%;
+ transform: translate(-0.875rem, 1.0625rem);
+
+}
+
+.Ct-container-2{
+    width: 1066px;
+height: 351px;
+background: rgba(86, 22, 238, 0.31);
+box-shadow: 2px 4px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+margin: 0 auto;
+}
+
+.LogoFooter{
+    width: 13.75rem;
+    height: 13.75rem;
+    margin: 0 auto;
+}
