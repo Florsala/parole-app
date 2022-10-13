@@ -29,7 +29,7 @@ const Servicios = () => {
           backgroundImage: `url(${dots})`,
 
           backgroundRepeat: "repeat",
-          height: "60rem",
+          /* height: "60rem", */
         }}
       >
         <div className="Serv-container">

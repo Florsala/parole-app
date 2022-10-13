@@ -31,14 +31,18 @@ const Home = () => {
           </p>
         </div>
 
-        <div style={{ marginTop: "11.875rem", marginLeft: "73px" }}>
-          <button className="btnHome-1">Conocenos</button>
+        <div className="btns-home"
+          
+        >
+          <div>
+            <button className="btnHome-1">Conocenos</button>
 
           <button className="btnHome-2">Contactanos</button>
-        </div>
-
-        <div>
-          <img className="btnpurple" src={btnpurple} alt="" />
+          </div>
+          
+          <div className="btnpurple-container" style={{ flexGrow: "3" }}>
+            <img className="btnpurple" src={btnpurple} alt="" />
+          </div>
         </div>
 
         <div className="circle-2"></div>
@@ -48,60 +52,63 @@ const Home = () => {
       </section>
 
       <section id="inicio-2p">
-        <div className="circle-6"></div>
 
-        <div className="Box-1">
-          <p>
-            Con nuestro servicio de <span>IT Recruiting </span> resolvemos las
-            necesidades de staffing de tu compañía logrando el match perfecto
-            que necesitás para seguir creciendo.
-          </p>
-        </div>
-
-        <div className="circle-7"></div>
-
-        <div>
-          <img
-            className="circle-8"
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
-            alt=""
-          />
-        </div>
-
-        <div className="Box-2">
-          <p>
-            Con nuestros <span> Trainings</span> los colaboradores de tu empresa
-            incorporan y elevan sus soft skills mejorando los vínculos
-            personales y el desempeño profesional.
-          </p>
-        </div>
-
-        <div>
+      <div>
           <img className="lineHome" src={lineHome} alt="linea" />
         </div>
+        <div className="circle-6"></div>
+        <div className="circle-7"></div>
+
+        <div className="inicio2">
+          <div className="Box-1">
+            <p>
+              Con nuestro servicio de <span>IT Recruiting </span> resolvemos las
+              necesidades de staffing de tu compañía logrando el match perfecto
+              que necesitás para seguir creciendo.
+            </p>
+          </div>
+
+          <div className="Box-img">
+            <img
+              className="circle-8"
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+              alt=""
+            />
+          </div>
+
+          <div className="Box-2">
+            <p>
+              Con nuestros <span> Trainings</span> los colaboradores de tu
+              empresa incorporan y elevan sus soft skills mejorando los vínculos
+              personales y el desempeño profesional.
+            </p>
+          </div>
+        </div>
+
+      
       </section>
 
       <section
         style={{
           backgroundImage: `url(${dots})`,
-          marginTop: "49.75rem",
+          marginTop: "6rem",
           backgroundRepeat: "repeat",
-          height: "93.75rem",
+          height: "113rem",
         }}
       >
-        <div className="container01">
-          <div>
+        <div className="grid">
+          <div className="elem-1">
             <img
               className="circle-img1"
               src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
               alt="hands"
             />
-            <div className="out-circle"></div>
           </div>
+<div className="number"><p className="number-section"> 01.</p></div>
 
-          
+
           <div className="number-section_container">
-          <p className="number-section"> 01.</p>
+            
             <h5 className="number-section_title">
               Estamos enfocados en conectar con tus necesidades de staffing
             </h5>
@@ -116,24 +123,23 @@ const Home = () => {
               organización.
             </p>
           </div>
-        </div>
 
-        {/* segunda imagen */}
+          {/* segunda imagen */}
 
-        <div className="container02">
-          <div>
+          <div className="elem-2">
             <img
               className="circle-img2"
               src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
               alt="meeting"
             />
-            <div className="out-circle2"></div>
           </div>
 
-       
+          <div className="number2">
+          <p className="number-section2">02.</p>
+          </div>
 
           <div className="number-section_container2">
-          <p className="number-section2">02.</p>
+            
             <h5 className="number-section_title2">
               Somos expertos en comunicación y aplicación de Soft Skills{" "}
             </h5>
@@ -149,43 +155,40 @@ const Home = () => {
               maximización del potencial de los colaboradores.
             </p>
           </div>
-        </div>
 
-        {/* tercera imagen */}
+          {/* tercera imagen */}
 
-        <div className="container03">
-          <div>
+          <div className="elem-3">
             <img
               className="circle-img3"
               src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
               alt="woman"
             />
-            <div className="out-circle3"></div>
+          </div>
 
-            
+          <div className="number3">
+          <p className="number-section3">03.</p>
+          </div>
+          <div className="number-section_container3">
+           
+            <h5 className="number-section_title3">
+              Nos especializamos en el <br /> Sector IT, con servicios 100%
+              remotos{" "}
+            </h5>
 
-            <div className="number-section_container3">
-            <p className="number-section3">03.</p>
-              <h5 className="number-section_title3">
-                Nos especializamos en el <br /> Sector IT, con servicios 100%
-                remotos{" "}
-              </h5>
+            <img className="chevron-down3" src={down} alt="chevron" />
 
-              <img className="chevron-down3" src={down} alt="chevron" />
-
-              <p className="number-section_text3">
-                Trabajamos en modalidad online desde que Parole nació en 2017
-                porque entendimos la necesidad de conexión remota que ya había
-                en aquel momento. Decidimos seguir por esa línea convirtiéndonos
-                en expertos en el sector IT que fue el que más rápido se adaptó
-                a la tendencia y se subió a la ola de transformación digital.
-                Hoy desde la virtualidad llegamos a clientes de todo el mundo
-                con nuestros servicios de Recruiting y Soft Skills Training.
-              </p>
-            </div>
+            <p className="number-section_text3">
+              Trabajamos en modalidad online desde que Parole nació en 2017
+              porque entendimos la necesidad de conexión remota que ya había en
+              aquel momento. Decidimos seguir por esa línea convirtiéndonos en
+              expertos en el sector IT que fue el que más rápido se adaptó a la
+              tendencia y se subió a la ola de transformación digital. Hoy desde
+              la virtualidad llegamos a clientes de todo el mundo con nuestros
+              servicios de Recruiting y Soft Skills Training.
+            </p>
           </div>
         </div>
-
         <div>
           <img className="btnpurple" src={btnpurple} alt="" />
         </div>

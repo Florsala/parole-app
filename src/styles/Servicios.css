@@ -137,12 +137,15 @@
       flex-direction: row;
       align-content: center;
       justify-content: space-between;
+      width:100%;
     }
 
     .empresas-container img {
       filter: grayscale(1);
       object-fit: none;
       cursor: pointer;
+      height: 9rem;
+      margin-right: 2rem;
 
     }
 

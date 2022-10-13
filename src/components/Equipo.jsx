@@ -2,10 +2,12 @@ import React from "react";
 import "../styles/Equipo.css";
 import dots from "../assets/dots.svg";
 
-import Dana from "../assets/Equipo/Dana.png";
-import Lorena from "../assets/Equipo/Lorena.png";
+import Dana from "../assets/Equipo/Dan2-2.png";
+import Lorena from "../assets/Equipo/lore2.png";
 
-import Daiana from "../assets/Equipo/Daiana.png";
+import Daiana from "../assets/Equipo/Dai2-1.png";
+
+import "../styles/Form.css";
 
 const Equipo = () => {
   return (
@@ -14,7 +16,7 @@ const Equipo = () => {
         backgroundImage: `url(${dots})`,
 
         backgroundRepeat: "repeat",
-        height: "60rem",
+        /* height: "60rem", */
       }}
     >
       <div className="Eq-container">
@@ -25,11 +27,11 @@ const Equipo = () => {
       </div>
       <div className="Eq-container-p">
         <div className="Eq-container-p-box">
-          <div className="box-img" >
+          <div className="box-img">
             <img src={Dana} alt="Dana Licht" />
             <div className="drop"></div>
           </div>
-          <div className="box-text" >
+          <div className="box-text">
             <h5>Dana Licht</h5>
             <ul>
               <li>Desarrollo del capital humano en soft skills.</li>
@@ -74,17 +76,52 @@ const Equipo = () => {
         </div>
       </div>
 
+      <div className="trab-container">
+        <div className="trab-container-text">
+          <h3>Trabajá con nosotros</h3>
 
+          <form action="" className="form">
+            <div style={{width: '100%',
+    display: 'flex',
+    flexFlow: 'row wrap'}}>
 
-<div className="trab-container">
+               <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                id="email"
+                /*  value={inputNombre}
+            onChange={handleInputNombre} */
+                required
+              />
 
-    <div className="trab-container-text">
-        <h3>Trabajá con nosotros</h3>
-    </div>
+              <textarea
+                name="mensaje"
+                as="textarea"
+                cols="30"
+                rows="1"
+                aria-required="true"
+                aria-invalid="false"
+                placeholder="Tu mensaje"
+                /*  value={inputMsg}
+            onChange={handleInputMsg} */
+                required
+              />
 
+              <button className="btnForm" type="submit" value="Enviar">
+                {" "}
+                Enviar
+              </button>
+            
 
-</div>
-
+            <div style={{ marginRight: "auto", padding: "1rem" }}>
+              <p className="cv"> Adjuntar CV</p>
+            </div>
+            </div>
+             
+          </form>
+        </div>
+      </div>
     </div>
   );
 };

@@ -16,42 +16,41 @@ const Footer = () => {
         <img className="logoFooter" src={Logo} alt="" />
 
         <div className="footer-icons">
-          <img src={Linkedin} alt="" />
-          <img src={Facebook} alt="" />
-          <img src={Instagram} alt="" />
+          <img src={Linkedin} alt="Linkedin" />
+          <img src={Facebook} alt="Facebook" />
+          <img src={Instagram} alt="Instagram" />
         </div>
       </div>
 
       <div className="container-info">
-
         <div className="footer-address">
-        <h4>
-          <span>
-            <img src={Location} alt="" />
-          </span>
-          Dirección
-        </h4>
-        <p>La Plata - CP 1900</p>
-        <p>Buenos Aires - Argentina</p>
+          <h4>
+            <span>
+              <img src={Location} alt="Dirección" />
+            </span>
+            Dirección
+          </h4>
+          <p>La Plata - CP 1900</p>
+          <p>Buenos Aires - Argentina</p>
+        </div>
+
+        <div className="footer-text">
+          <h4>
+            <span>
+              <img src={Envelope} alt="Mail" />
+            </span>
+            Contacto
+          </h4>
+          <p>contacto@parole.com.ar</p>
+          <p>+542214955544</p>
+        </div>
       </div>
 
-      <div className="footer-text">
-        <h4>
-         
-          <span>
-          
-            <img src={Envelope} alt="" />
-          </span>
-          Contacto
-        </h4>
-        <p>contacto@parole.com.ar</p>
-        <p>+542214955544</p>
-      </div>
+      <div className="bottom-footer">
+<p style={{color:'white', fontWeight: '400', fontFamily: 'Nunito'}}>   &copy;{new Date().getFullYear()} Parole Consultora - Todos los derechos reservados</p>
+
       </div>
 
-      <div className="bottom-footer"></div>
-
-      
     </div>
   );
 };
