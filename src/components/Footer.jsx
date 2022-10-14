@@ -23,34 +23,29 @@ const Footer = () => {
       </div>
 
       <div className="container-info">
-        <div className="footer-address">
-          <h4>
-            <span>
-              <img src={Location} alt="Dirección" />
-            </span>
-            Dirección
-          </h4>
-          <p>La Plata - CP 1900</p>
-          <p>Buenos Aires - Argentina</p>
-        </div>
-
         <div className="footer-text">
           <h4>
             <span>
-              <img src={Envelope} alt="Mail" />
+              <img style={{width: "1.8rem"}} src={Envelope} alt="Mail" />
             </span>
             Contacto
           </h4>
-          <p>contacto@parole.com.ar</p>
-          <p>+542214955544</p>
+          <div style={{fontSize:"1.1rem"}}>
+             <p>contacto@parole.com.ar</p>
+          <p>Tel: +542214955544</p>
+          <p>Tel: +54 261 6688190</p>
+          </div>
+         
         </div>
       </div>
 
       <div className="bottom-footer">
-<p style={{color:'white', fontWeight: '400', fontFamily: 'Nunito'}}>   &copy;{new Date().getFullYear()} Parole Consultora - Todos los derechos reservados</p>
-
+        <p style={{ color: "white", fontWeight: "400", fontFamily: "Nunito" }}>
+          {" "}
+          &copy;{new Date().getFullYear()} Parole Consultora - Todos los
+          derechos reservados
+        </p>
       </div>
-
     </div>
   );
 };

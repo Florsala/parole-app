@@ -6,7 +6,7 @@
 
 /*   width: 60rem;
  */
-  margin-right: 1rem;
+  margin-left: 2rem;
   justify-content: center;
   align-content: center;
 }
@@ -35,14 +35,13 @@
   padding: 1.2rem;
   font-family: inherit;
   border: none;
-  min-width: 15rem;
+  min-width: 5rem;
   min-height: 4rem;
   background: rgb(185, 162, 240);
   border-radius: 0.9375rem;
   margin: 0.5rem;
   max-height: 6.25rem;
   height: 4rem;
-  width: 60%;
   overflow: hidden;
 }
 

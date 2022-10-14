@@ -1,24 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import logo from "../assets/LOGO.svg";
 import logo2 from "../assets/logo-h.svg";
 
 import Hamburger from "../assets/hamburger.svg";
 import Xbar from "../assets/xbar.svg";
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 const NavBar = () => {
-
-const inicio = useRef(null);
-const servicios = useRef(null);
-const nosotros = useRef(null);
-const contacto = useRef(null);
-
-const scrollToSection = (elementRef) => {
-  window.scrollTo({
-    top: elementRef.current.offsetTop,
-    behavior: "smooth",
-  });
-};
-
 
 
   const [click, setClick] = useState(false);
@@ -29,29 +18,38 @@ const scrollToSection = (elementRef) => {
   return (
     <div>
       <div className="navbar">
-        <div style={{ display: "flex", flexFlow: "row nowrap" }}>
-          <img
-            style={{ marginLeft: "5.375rem", width: "3.125rem" }}
-            src={logo}
-            alt="logo"
-          />
+        <div className="navbar-logos" >
+          <img className="logo-P" src={logo} alt="logo" />
           <img className="logo-parole" src={logo2} alt="parole" />
         </div>
 
         <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li onClick={() => scrollToSection(inicio)} className="nav-item">INICIO</li> <span className="active-menu"></span>
-          <li  onClick={() => scrollToSection(servicios)} className="nav-item">SERVICIOS</li>
-          <li  onClick={() => scrollToSection(nosotros)} className="nav-item">NOSOTROS</li>
-          <li  onClick={() => scrollToSection(contacto)} className="nav-item">CONTACTO</li>
+          <li onClick={() => scrollToSection(inicio)} className="nav-item">
+            <Link to="/#inicio" smooth>INICIO</Link>
+            
+          </li>
+          <span className="active-menu"></span>
+          <li onClick={() => scrollToSection(servicios)} className="nav-item">
+            <Link to="/#servicios" smooth> SERVICIOS</Link>
+           
+          </li>
+          <li onClick={() => scrollToSection(nosotros)} className="nav-item">
+            <Link to="/#nosotros" smooth>NOSOTROS</Link>
+            
+          </li>
+          <li onClick={() => scrollToSection(contacto)} className="nav-item">
+            <Link to="/#contacto" smooth>CONTACTO</Link>
+            
+          </li>
         </ul>
-      </div>
 
-      <div className="hamburger" onClick={handleClick}>
-        {click ? (
-          <img src={Xbar} alt="X" />
-        ) : (
-          <img src={Hamburger} alt="menu" />
-        )}
+        <div className="hamburger" onClick={handleClick}>
+          {click ? (
+            <img src={Xbar} alt="X" />
+          ) : (
+            <img src={Hamburger} alt="menu" />
+          )}
+        </div>
       </div>
     </div>
   );

@@ -12,6 +12,7 @@ import "../styles/Form.css";
 const Equipo = () => {
   return (
     <div
+    id="nosotros"
       style={{
         backgroundImage: `url(${dots})`,
 
@@ -79,48 +80,43 @@ const Equipo = () => {
       <div className="trab-container">
         <div className="trab-container-text">
           <h3>Trabajá con nosotros</h3>
+        </div>
 
-          <form action="" className="form">
-            <div style={{width: '100%',
-    display: 'flex',
-    flexFlow: 'row wrap'}}>
-
-               <input
-                type="text"
-                name="email"
-                placeholder="Email"
-                id="email"
-                /*  value={inputNombre}
+        <form action="" className="form">
+          <div style={{ width: "100%", display: "flex", flexFlow: "row wrap" }}>
+            <input
+              type="text"
+              name="email"
+              placeholder="Email"
+              id="email"
+              /*  value={inputNombre}
             onChange={handleInputNombre} */
-                required
-              />
+              required
+            />
 
-              <textarea
-                name="mensaje"
-                as="textarea"
-                cols="30"
-                rows="1"
-                aria-required="true"
-                aria-invalid="false"
-                placeholder="Tu mensaje"
-                /*  value={inputMsg}
+            <textarea
+              name="mensaje"
+              as="textarea"
+              cols="30"
+              rows="1"
+              aria-required="true"
+              aria-invalid="false"
+              placeholder="Tu mensaje"
+              /*  value={inputMsg}
             onChange={handleInputMsg} */
-                required
-              />
+              required
+            />
 
-              <button className="btnForm" type="submit" value="Enviar">
-                {" "}
-                Enviar
-              </button>
-            
+            <button className="btnForm" type="submit" value="Enviar">
+              {" "}
+              Enviar
+            </button>
 
             <div style={{ marginRight: "auto", padding: "1rem" }}>
               <p className="cv"> Adjuntar CV</p>
             </div>
-            </div>
-             
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
   );

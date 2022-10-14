@@ -1,7 +1,7 @@
 .Serv-title {
   font-weight: 700;
   font-size: 3.75rem;
-  line-height: 6.5625rem;
+  line-height: 4.5625rem;
   position: absolute;
   z-index: 1;
 }
@@ -9,7 +9,7 @@
 .Serv-container {
   position: relative;
   margin-left: 4.375rem;
-  height: 12.5rem;
+  height: 6.5rem;
 }
 
 .Serv-circle-pink {
@@ -35,22 +35,22 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  
+  margin-bottom: 10rem;
 }
 
 .Serv-box {
   width: 28rem;
-  height:26rem;
-  
+  height: 26rem;
+
   margin: 3rem;
   background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
   border-radius: 1.5625rem;
 }
 
 .circle-purple {
-  width: 95.11px;
-  height: 90px;
+  width: 5.9444rem;
+  height: 5.625rem;
   border-radius: 50%;
   background: #3604ab;
   margin-left: 2rem;
@@ -61,94 +61,96 @@
   align-content: center;
 }
 
-.Serv-box-title{
-    width: 19.3513rem;
-    height: 6.4375rem;
-  
-    font-weight: 600;
-    font-size: 1.625rem;
-    line-height: 2.4375rem;
-    letter-spacing: 0.1em;
-    color: #000000;
+.Serv-box-title {
+  width: 19.3513rem;
+  height: 6.4375rem;
+
+  font-weight: 600;
+  font-size: 1.625rem;
+  line-height: 2.4375rem;
+  letter-spacing: 0.1em;
+  color: #000000;
 }
 
-.Serv-box-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 22rem;
-    margin: 1.25rem auto;
-    align-items: center;
+.Serv-box-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 22rem;
+  margin: 1.25rem auto;
+  align-items: center;
+  font-size: 1rem;
 }
 
-.Serv-box-content ul{
-    display: list-item;}
+.Serv-box-content ul {
+  display: list-item;
+}
 
-    .chevron-down{
- width: 65px;
-    margin-top: 2rem;
+.chevron-down_svs {
+  width: 4.0625rem;
+  margin-top: 2rem;
+}
 
-    }
-   
 /* Prueba --- borrar si no funciona */
 
-    @keyframes bounceInDown {
-      from,
-      60%,
-      75%,
-      90%,
-      to {
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      }
-    
-      0% {
-        opacity: 0;
-        transform: translate3d(0, -3000px, 0) scaleY(3);
-      }
-    
-      60% {
-        opacity: 1;
-        transform: translate3d(0, 25px, 0) scaleY(0.9);
-      }
-    
-      75% {
-        transform: translate3d(0, -10px, 0) scaleY(0.95);
-      }
-    
-      90% {
-        transform: translate3d(0, 5px, 0) scaleY(0.985);
-      }
-    
-      to {
-        transform: translate3d(0, 0, 0);
-      }
-    }
-    
-    .bounceInDown {
-      animation-name: bounceInDown;
-    }
+@keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
 
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0) scaleY(3);
+  }
 
-    /* hasta aca era la  Prueba --- borrar si no funciona */
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0) scaleY(0.9);
+  }
 
+  75% {
+    transform: translate3d(0, -10px, 0) scaleY(0.95);
+  }
 
-    .empresas-container {
-      display: flex;
-      flex-direction: row;
-      align-content: center;
-      justify-content: space-between;
-      width:100%;
-    }
+  90% {
+    transform: translate3d(0, 5px, 0) scaleY(0.985);
+  }
 
-    .empresas-container img {
-      filter: grayscale(1);
-      object-fit: none;
-      cursor: pointer;
-      height: 9rem;
-      margin-right: 2rem;
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
 
-    }
+.bounceInDown {
+  animation-name: bounceInDown;
+}
 
-    .empresas-container img:hover{
-      filter: none;
-    }
+/* hasta aca era la  Prueba --- borrar si no funciona */
+
+.empresas-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.empresas-container img {
+  filter: grayscale(1);
+  object-fit: contain;
+  cursor: pointer;
+  height: 9rem;
+  margin-right: 4rem;
+  width: 9rem;
+  
+}
+
+.empresas-container img:hover {
+  filter: none;
+  transform: scale(1.1);
+  transition: transform 0.4s;
+}

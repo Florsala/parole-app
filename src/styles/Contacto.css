@@ -13,12 +13,11 @@
 }
 
 .Ct-container {
-    position: relative;
-    height: 9.5rem;
+  position: relative;
+    height: 10.5rem;
     margin-top: 16rem;
     margin-left: 3rem;
-    margin-bottom: 2rem;
-}
+    margin-bottom: 2rem;}
 
 .Ct-circle-pink {
   position: absolute;
@@ -53,7 +52,7 @@
 .form-2{
     width: 53rem;
     margin-top: -90px;
-    
+    margin-left: 2rem;
     margin-right: 1rem;
     flex-direction: column;
     display: flex;
@@ -125,4 +124,5 @@
   font-weight: 700;
   font-size: 3.125rem;
   color: rgba(0, 0, 0, 0.7);
+  margin-left: 2rem;
 }

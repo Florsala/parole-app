@@ -5,7 +5,7 @@ import Mail from "../assets/mailbox.svg";
 
 const Contacto = () => {
   return (
-    <div >
+    <div id="contacto" >
       <div className="Ct-container">
         <h2 className="Serv-title">¿Podemos ayudarte con algo más?</h2>
 

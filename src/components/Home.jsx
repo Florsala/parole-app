@@ -5,10 +5,12 @@ import lineHome from "../assets/line-home.svg";
 
 import down from "../assets/chevron-down.svg";
 import dots from "../assets/dots.svg";
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 const Home = () => {
   return (
-    <div>
+    <div  >
       <section id="inicio">
         <div className="circle-1"></div>
         <div className="TitleContainer">
@@ -31,17 +33,22 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="btns-home"
-          
-        >
+        <div className="btns-home">
           <div>
-            <button className="btnHome-1">Conocenos</button>
+            <button className="btnHome-1">
+              <Link to="/#nosotros" smooth>Conocenos</Link>
+              </button>
 
-          <button className="btnHome-2">Contactanos</button>
+            <button className="btnHome-2">
+            <Link to="/#contacto" smooth>Contactanos</Link>
+              </button>
           </div>
-          
+
           <div className="btnpurple-container" style={{ flexGrow: "3" }}>
+            <Link to="/#inicio-2p" smooth>
             <img className="btnpurple" src={btnpurple} alt="" />
+            </Link>
+            
           </div>
         </div>
 
@@ -52,8 +59,7 @@ const Home = () => {
       </section>
 
       <section id="inicio-2p">
-
-      <div>
+        <div>
           <img className="lineHome" src={lineHome} alt="linea" />
         </div>
         <div className="circle-6"></div>
@@ -84,8 +90,6 @@ const Home = () => {
             </p>
           </div>
         </div>
-
-      
       </section>
 
       <section
@@ -93,7 +97,7 @@ const Home = () => {
           backgroundImage: `url(${dots})`,
           marginTop: "6rem",
           backgroundRepeat: "repeat",
-          height: "113rem",
+         marginBottom: "6rem",
         }}
       >
         <div className="grid">
@@ -104,11 +108,11 @@ const Home = () => {
               alt="hands"
             />
           </div>
-<div className="number"><p className="number-section"> 01.</p></div>
-
+          <div className="number">
+            <p className="number-section"> 01.</p>
+          </div>
 
           <div className="number-section_container">
-            
             <h5 className="number-section_title">
               Estamos enfocados en conectar con tus necesidades de staffing
             </h5>
@@ -135,11 +139,10 @@ const Home = () => {
           </div>
 
           <div className="number2">
-          <p className="number-section2">02.</p>
+            <p className="number-section2">02.</p>
           </div>
 
           <div className="number-section_container2">
-            
             <h5 className="number-section_title2">
               Somos expertos en comunicación y aplicación de Soft Skills{" "}
             </h5>
@@ -167,10 +170,9 @@ const Home = () => {
           </div>
 
           <div className="number3">
-          <p className="number-section3">03.</p>
+            <p className="number-section3">03.</p>
           </div>
           <div className="number-section_container3">
-           
             <h5 className="number-section_title3">
               Nos especializamos en el <br /> Sector IT, con servicios 100%
               remotos{" "}

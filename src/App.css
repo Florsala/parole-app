@@ -75,16 +75,29 @@ body {
   display: none;
 }
 
-
+.logo-P{
+   width: 3.125rem;
+}
 
 .logo-parole {
   margin-left: -1.125rem;
   width: 8rem;
 }
 
+.navbar-logos{
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left: 5rem;
+}
+
 .nav-item {
   padding: 1rem;
   position: relative;
+}
+
+.nav-item a{
+text-decoration: none;
+color: inherit;
 }
 
 .nav-menu {
@@ -95,14 +108,15 @@ body {
 }
 .nav-menu li {
   list-style: none;
+ 
 }
 
 .active-menu {
   position: absolute;
-  width: 32px;
-  height: 32px;
-  left: 750px;
-  top: 42px;
+  width: 2rem;
+  height: 2rem;
+  left: 46.875rem;
+  top: 2.625rem;
   border-radius: 50%;
   background: rgba(255, 137, 137, 0.8);
   z-index: -1;
@@ -127,12 +141,13 @@ body {
 
 #inicio {
   margin-bottom: 8rem;
+  height: calc(100vh-70px);
 }
 
 .TitleContainer {
   width: 46rem;
   margin-left: 4.375rem;
-  margin-top: 7rem;
+  margin-top: 5rem;
   position: relative;
 }
 
@@ -163,8 +178,7 @@ body {
 .TextContainer {
   position: absolute;
   width: 34.875rem;
-  left: 6.625rem;
-}
+  margin-left: 5rem;}
 
 .TextContainer p {
   font-family: "Nunito", sans-serif;
@@ -202,6 +216,13 @@ body {
   flex-grow: 1;
   width: 8.75rem;
   height: 2.875rem;
+}
+
+.btnHome-1 a,
+.btnHome-2 a{
+  text-decoration: none;
+  color: #fff;
+
 }
 .btnHome-1:hover,
 .btnHome-2:hover {
@@ -291,11 +312,17 @@ button:focus-visible {
 /* seccion 2 - boxes */
 
 .inicio2{
+
+
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr auto 1fr;
-  height: calc(100vh - 6.5rem);
-  width: 74rem;
+  grid:
+  "Box-1      . " 14rem
+  "Box-img    . " 14rem
+  ".       Box-2" 14rem /
+  50% 50%;     
+
+  height: 44rem;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -314,14 +341,16 @@ button:focus-visible {
   box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.25);
   border-radius: 1.5625rem;
   z-index: 1;
+  grid-area: Box-1;
  
-  grid-row: 1/3;
-  grid-column: 1/2;
-  transform: translate(2.4375rem, -1.6875rem);
+  /* grid-row: 1/3;
+  grid-column: 1/2; 
+  transform: translate(2.4375rem, -1.6875rem);*/
 }
 
 .Box-img{
-  grid-row: 1/2;
+  /* grid-row: 1/2; */
+  grid-area: Box-img;
 }
 
 .Box-1 p,
@@ -370,13 +399,13 @@ button:focus-visible {
   gap: 0.625rem;
   width: 26.3125rem;
   height: 13.75rem;
+  z-index: 1;
+
+  grid-area: Box-2;
  
-  grid-row: 2/4;
-    grid-column: 2/4;
-    transform: translate(16.8125rem, -8.875rem);
+ 
 
   background: var(--lila-color);
-  /* Box-Shadow */
 
   box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.25);
   border-radius: 1.5625rem;
@@ -384,48 +413,65 @@ button:focus-visible {
 
 .lineHome {
   position: absolute;
-  transform: translate(-1.3125rem,2.75rem);}
+  transform: translate(0.6875rem,3.75rem);
+  height: 41rem;
+}
 
 /* GRID  */
 
 .grid{
   display: grid;
-  grid-template-columns: auto auto 2fr;
-  grid-template-rows: repeat(3, 30rem);
+  grid: 
+  "elem-1  number        number-section_container"
+  "number-section_container2   number2   elem-2"
+  "elem-3  number3  number-section_container3"
+ 
+  ;
+  gap: 8rem 0rem;
   width: 80%;
   margin: 0 auto;
-  gap: 8rem 0rem;
+ /*  
+  grid-template-columns: auto auto 2fr;
+  grid-template-rows: repeat(3, 30rem);
+  
+  gap: 8rem 0rem; */
 }
 
 .elem-1{
-grid-row: 1/2;
-grid-column: 1/2;
+  grid-area: elem-1;
+/* grid-row: 1/2;
+grid-column: 1/2; */
 }
 
 .elem-2{
-  grid-row: 2/3;
-grid-column: 3/4;
+  grid-area: elem-2;
+ /*  grid-row: 2/3;
+grid-column: 3/4; */
 }
 
 .elem-3{
-  grid-row: 3/4;
-grid-column: 1/2;
+  grid-area: elem-3;
+/*   grid-row: 3/4;
+grid-column: 1/2; */
 }
 
 
 .number-section_container{
-  grid-row: 1/2;
-    grid-column: 3/4;
+ /*  grid-row: 1/2;
+    grid-column: 3/4; */
+    grid-area: number-section_container;
 }
 
 .number-section_container2{
-  grid-row: 2/3;
-  grid-column: 1/2;
+ /*  grid-row: 2/3;
+  grid-column: 1/2; */
+  grid-area: number-section_container2;
 }
 
 .number-section_container3{
-  grid-row: 3/4;
-  grid-column: 3/4;
+ /*  grid-row: 3/4;
+  grid-column: 3/4; */
+  grid-area: number-section_container3;
 }
 
 .elem-1,
@@ -465,11 +511,12 @@ grid-column: 1/2;
   opacity: 80%;
   z-index: 2;
 
-  outline: 5px solid #f25757;
-  outline-offset: 5px;
+  outline: 0.3125rem solid #f25757;
+  outline-offset: 0.3125rem;
 }
 .number{
   transform: translate(-113px, -120px);
+  grid-area: number;
 }
 
 
@@ -525,8 +572,8 @@ grid-column: 1/2;
   opacity: 80%;
   z-index: 2;
 
-  outline: 5px solid #f25757;
-  outline-offset: 5px;
+  outline: 0.3125rem solid #f25757;
+  outline-offset: 0.3125rem;
 }
 
 .number-section2 {
@@ -538,6 +585,8 @@ grid-column: 1/2;
 }
 
 .number2{
+  grid-area: number2;
+
   transform: translate(-145px, -6.75rem);
 }
 .number-section_container2 {
@@ -578,8 +627,8 @@ grid-column: 1/2;
   opacity: 80%;
   z-index: 2;
 
-  outline: 5px solid #f25757;
-  outline-offset: 5px;
+  outline: 0.3125rem solid #f25757;
+  outline-offset: 0.3125rem;
 }
 
 
@@ -615,6 +664,8 @@ grid-column: 1/2;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
 }
 .number3{
+  grid-area: number3;
+
   transform: translate(-143px, -8.75rem);
 
 }
@@ -631,7 +682,7 @@ grid-column: 1/2;
 @media screen and (max-width: 1200px){
   html,
   body {
-    font-size: 15px;
+    font-size: 14px;
   }
 
 }
@@ -641,7 +692,7 @@ grid-column: 1/2;
 @media screen and (max-width: 940px) {
   html,
   body {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .hamburger {
@@ -655,7 +706,7 @@ grid-column: 1/2;
 
   .hamburger img{
     z-index: 2;
-    width: 2.3125rem;
+    width: 4rem;
     display: flex;
   }
 
@@ -665,7 +716,7 @@ grid-column: 1/2;
     top: 0;
     flex-direction: column;
     justify-content: center;
-    background-color: #f23d3d;
+    background-color: #3a07f2;
     width: 50%;
     height: 100%;
     text-align: center;
@@ -697,7 +748,7 @@ grid-column: 1/2;
 
   html,
   body {
-    font-size: 12px;
+    font-size: 10px;
   }
 
 .btns-home{
@@ -709,7 +760,7 @@ grid-column: 1/2;
   margin: 2rem auto;
 }
 
-.inicio2{
+/* .inicio2{
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
@@ -724,7 +775,7 @@ grid-column: 1/2;
   grid-row: 2/3;
   grid-column: 2/3;
   transform: translate(-8.1875rem, 6rem);
-}
+} */
 
 
 }
@@ -733,16 +784,129 @@ grid-column: 1/2;
 @media only screen and (max-width: 600px) {
   html,
   body {
-    font-size: 10px;
+    font-size: 8px;
   }
 
-  .Box-img{
-    transform: translate(0.625rem, -4.0625rem);
-    margin: 0;
+
+}
+
+
+
+@media only screen and (max-width: 599px){
+  
+  .navbar-logos{
+    margin-left: 2rem;
+  }
+  .TitleContainer {
+    margin-left: 2rem;
+  }
+
+  .TextContainer{
+    margin-left: 2rem;
+  }
+
+  .btns-home{
+    margin-left: 2rem;
+  }
+
+  .inicio2{
+    display: grid;
+    grid:
+        "Box-1 . " 14rem
+        "Box-img . " 14rem
+        ". Box-2" 14rem / 18% 50%;
+  }
+
+  .grid {
+    display: grid;
+    grid:
+    "elem-1 number number-section_container" 22.5rem
+    "number-section_container2 number2 elem-2" 24.875rem
+    "elem-3 number3 number-section_container3" 28.75rem/23% 21% 75%;
+    gap: 8rem 0.4rem;
+    width: 80%;
+    margin: 8rem auto;
+  
+}
+
+.number {
+  transform: translate(52px, -82px);
+}
+.number2 {
+  transform: translate(-36px, -6.75rem);
+}
+
+.number3{
+  transform: translate(29px, -8.75rem);
+}
+
+.number-section_container3 {
+  width: 91%;
+}
+
+.circle-img1 {
+  width: 15rem;
+  height: 15rem;
+}
+.circle-img2 {
+  width: 15rem;
+  height: 15rem;
+}
+
+.circle-img3 {
+  width: 15rem;
+  height: 15rem;
+}
+
+.number-section_container {
+  width: 89%;
+}
+
+
+}
+
+@media only screen and (min-width: 600px){
+  .inicio2{
+    display: grid;
+    grid:
+    "Box-1     0 " 15.625rem
+    "Box-img Box-2"15.625rem/
+    50% 50%;      
+   
+
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .inicio2{
+    display: grid;
+    grid:
+    "Box-1     0 " 15.625rem
+    "Box-img Box-2" 15.625rem/
+    36% 50%;      
+   
+
   }
 
   .Box-2{
-    transform: translate(-22.1875rem, 10rem);
+    margin: 1.5rem 5rem;
+  }
+
+
+
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .inicio2{
+    display: grid;
+    grid:
+    "Box-1 . . " 8rem
+    ". Box-img ." 8rem
+    ". . Box-2" 12rem/ 30% 26% 22%;    
+   
+
   }
 
 }

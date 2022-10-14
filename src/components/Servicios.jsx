@@ -6,25 +6,23 @@ import read from "../assets/read.svg";
 import down from "../assets/chevron-down.svg";
 import dots from "../assets/dots.svg";
 
-import Altec from '../assets/logos-emp/altec.png';
-import Anilab from '../assets/logos-emp/anilab.png';
-import Comahue from '../assets/logos-emp/comahue.png';
-import Continental from '../assets/logos-emp/continental.png';
-import Doppler from '../assets/logos-emp/doppler.png';
-import Making from '../assets/logos-emp/making.png';
-import Mundo from '../assets/logos-emp/mundo.png';
-import Quilmes from '../assets/logos-emp/quilmes.png'
+import Altec from "../assets/logos-emp/altec.png";
+import Anilab from "../assets/logos-emp/anilab.png";
+import Comahue from "../assets/logos-emp/comahue.png";
+import Continental from "../assets/logos-emp/continental2.png";
+import Doppler from "../assets/logos-emp/doppler.png";
+import Making from "../assets/logos-emp/making2.svg";
+import Alarz from "../assets/logos-emp/alarz.png";
+import Remax from "../assets/logos-emp/REMAX_logo.svg.png";
+import Tasa from "../assets/logos-emp/Tasa.svg";
 
-
-
-
-
-
+import Quilmes from "../assets/logos-emp/quilmes.png";
 
 const Servicios = () => {
   return (
     <>
       <section
+        id="servicios"
         style={{
           backgroundImage: `url(${dots})`,
 
@@ -58,7 +56,7 @@ const Servicios = () => {
                   <li>Onboarding.</li>
                 </ul>
               </div>
-              <img className="chevron-down" src={down} alt="" />
+              <img className="chevron-down_svs" src={down} alt="" />
             </div>
           </div>
 
@@ -86,15 +84,13 @@ const Servicios = () => {
                 </ul>
               </div>
 
-              <img className="chevron-down bounceInDown" src={down} alt="" />
+              <img className="chevron-down_svs " src={down} alt="" />
             </div>
           </div>
         </div>
       </section>
 
-      <section
-        
-      >
+      <section>
         <div className="Serv-container">
           <h2 className="Serv-title">Quiénes confían en nosotros</h2>
 
@@ -102,19 +98,19 @@ const Servicios = () => {
         </div>
 
         <div className="empresas-container">
-
+           <img src={Quilmes} alt="Quilmes" /> 
          <img src={Altec} alt="Altec" />
-         <img src={Anilab} alt="Anilab" />
-         <img src={Comahue} alt="Comahue" />
-         <img src={Continental} alt="Continental" />
-         <img src={Doppler} alt="Dopppler" />
          <img src={Making} alt="Making sense" />
-         <img src={Mundo} alt="Mundo" />
-         <img src={Quilmes} alt="Quilmes" />
-
-
-
-
+         <img src={Doppler} alt="Dopppler" />
+         <img src={Comahue} alt="Comahue" />
+         <img src={Tasa} alt="Tasa" />
+         <img src={Continental} alt="Continental" />
+         <img src={Anilab} alt="Anilab" />
+        <img src={Alarz} alt="Alarz" />
+        <img src={Remax} alt="Remax" />      
+         
+  
+         
         </div>
       </section>
     </>
