@@ -16,9 +16,11 @@ const Footer = () => {
         <img className="logoFooter" src={Logo} alt="" />
 
         <div className="footer-icons">
-          <img src={Linkedin} alt="Linkedin" />
-          <img src={Facebook} alt="Facebook" />
-          <img src={Instagram} alt="Instagram" />
+          <a className="f-icon" href="https://www.linkedin.com/company/11372125/admin/" target={'blank'}><img src={Linkedin} alt="Linkedin" /></a>
+          <a className="f-icon" href="https://www.facebook.com/Paroleconsultora" target={'blank'}> <img src={Facebook} alt="Facebook" /></a>
+          <a className="f-icon" href="https://www.instagram.com/paroleconsultora/" target={'blank'}> <img src={Instagram} alt="Instagram" /></a>
+         
+         
         </div>
       </div>
 

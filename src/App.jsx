@@ -9,6 +9,7 @@ import Servicios from "./components/Servicios";
 import Equipo from "./components/Equipo";
 import Contacto from "./components/Contacto";
 import Footer from "./components/Footer";
+import Whatsapp from "./components/Whatsapp";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Servicios />
       <Equipo />
       <Contacto />
+      <Whatsapp/>
 
       <Footer />
     </div>

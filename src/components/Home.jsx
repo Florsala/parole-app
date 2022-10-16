@@ -5,12 +5,13 @@ import lineHome from "../assets/line-home.svg";
 
 import down from "../assets/chevron-down.svg";
 import dots from "../assets/dots.svg";
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink as Link } from "react-router-hash-link";
 
+import '../styles/circle-animation.css'
 
 const Home = () => {
   return (
-    <div  >
+    <div>
       <section id="inicio">
         <div className="circle-1"></div>
         <div className="TitleContainer">
@@ -36,19 +37,22 @@ const Home = () => {
         <div className="btns-home">
           <div>
             <button className="btnHome-1">
-              <Link to="/#nosotros" smooth>Conocenos</Link>
-              </button>
+              <Link to="/#nosotros" smooth>
+                Conocenos
+              </Link>
+            </button>
 
             <button className="btnHome-2">
-            <Link to="/#contacto" smooth>Contactanos</Link>
-              </button>
+              <Link to="/#contacto" smooth>
+                Contactanos
+              </Link>
+            </button>
           </div>
 
           <div className="btnpurple-container" style={{ flexGrow: "3" }}>
             <Link to="/#inicio-2p" smooth>
-            <img className="btnpurple" src={btnpurple} alt="" />
+              <img className="btnpurple" src={btnpurple} alt="" />
             </Link>
-            
           </div>
         </div>
 
@@ -97,7 +101,7 @@ const Home = () => {
           backgroundImage: `url(${dots})`,
           marginTop: "6rem",
           backgroundRepeat: "repeat",
-         marginBottom: "6rem",
+          marginBottom: "6rem",
         }}
       >
         <div className="grid">
@@ -127,9 +131,10 @@ const Home = () => {
               organización.
             </p>
           </div>
+        </div>
 
-          {/* segunda imagen */}
-
+        {/* segunda imagen */}
+        <div className="grid2">
           <div className="elem-2">
             <img
               className="circle-img2"
@@ -158,9 +163,10 @@ const Home = () => {
               maximización del potencial de los colaboradores.
             </p>
           </div>
+        </div>
+        {/* tercera imagen */}
 
-          {/* tercera imagen */}
-
+        <div className="grid3">
           <div className="elem-3">
             <img
               className="circle-img3"

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/LOGO.svg";
 import logo2 from "../assets/logo-h.svg";
+import Elipse from "../assets/Ellipse.png"
 
 import Hamburger from "../assets/hamburger.svg";
 import Xbar from "../assets/xbar.svg";
@@ -25,20 +26,26 @@ const NavBar = () => {
 
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li onClick={() => scrollToSection(inicio)} className="nav-item">
-            <Link to="/#inicio" smooth>INICIO</Link>
+            <img className="ico" src={Elipse} alt="" />
+            <Link to="/#inicio" smooth
+             onClick={() => setClick(false)}>
+              INICIO</Link>
             
           </li>
-          <span className="active-menu"></span>
-          <li onClick={() => scrollToSection(servicios)} className="nav-item">
-            <Link to="/#servicios" smooth> SERVICIOS</Link>
+{/*           <span className="active-menu"></span>
+ */}          <li onClick={() => scrollToSection(servicios)} className="nav-item">
+  <img className="ico" src={Elipse} alt="" />
+            <Link to="/#servicios" smooth onClick={() => setClick(false)}> SERVICIOS</Link>
            
           </li>
           <li onClick={() => scrollToSection(nosotros)} className="nav-item">
-            <Link to="/#nosotros" smooth>NOSOTROS</Link>
+          <img className="ico" src={Elipse} alt="" />
+            <Link to="/#nosotros" smooth onClick={() => setClick(false)}>NOSOTROS</Link>
             
           </li>
           <li onClick={() => scrollToSection(contacto)} className="nav-item">
-            <Link to="/#contacto" smooth>CONTACTO</Link>
+          <img className="ico" src={Elipse} alt="" />
+            <Link to="/#contacto" smooth onClick={() => setClick(false)}>CONTACTO</Link>
             
           </li>
         </ul>
