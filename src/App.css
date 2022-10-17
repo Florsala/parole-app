@@ -9,6 +9,7 @@
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 #root {
@@ -75,8 +76,8 @@ body {
   display: none;
 }
 
-.logo-P{
-   width: 3.125rem;
+.logo-P {
+  width: 3.125rem;
 }
 
 .logo-parole {
@@ -84,7 +85,7 @@ body {
   width: 8rem;
 }
 
-.navbar-logos{
+.navbar-logos {
   display: flex;
   flex-flow: row nowrap;
   margin-left: 5rem;
@@ -93,7 +94,6 @@ body {
 .nav-item {
   padding: 1rem;
   position: relative;
-  
 }
 
 .ico {
@@ -101,14 +101,12 @@ body {
   float: left;
   display: none;
   z-index: -1;
-  opacity: .6;
+  opacity: 0.6;
 }
 
-
-
-.nav-item a{
-text-decoration: none;
-color: inherit;
+.nav-item a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-menu {
@@ -119,14 +117,11 @@ color: inherit;
 }
 .nav-menu li {
   list-style: none;
- 
 }
 
-
-
-
-
-
+.nav-menu.sm{
+  font-size: 1rem;
+}
 
 .navbar {
   position: fixed !important;
@@ -136,11 +131,16 @@ color: inherit;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: #ffffff;
-  /* position: absolute; */
+ 
+  
   z-index: 2;
   top: 0;
   left: 0;
+}
+
+.navbar-bcg{
+  background: #ffffff;
+  height: 5rem;
 }
 
 /* Title Seccion 1 */
@@ -148,6 +148,7 @@ color: inherit;
 #inicio {
   margin-bottom: 8rem;
   height: calc(100vh-70px);
+  z-index: 2;
 }
 
 .TitleContainer {
@@ -181,10 +182,15 @@ color: inherit;
   top: 7.75rem;
 }
 
+.LineTitle img{
+  width: 30rem;
+}
+
 .TextContainer {
   position: absolute;
   width: 34.875rem;
-  margin-left: 5rem;}
+  margin-left: 5rem;
+}
 
 .TextContainer p {
   font-family: "Nunito", sans-serif;
@@ -194,9 +200,9 @@ color: inherit;
   margin-top: 1.5625rem;
 }
 
-.btns-home{
+.btns-home {
   margin-top: 11.875rem;
-  margin-left: 4.5625rem;
+  margin-left: 5rem;
   display: flex;
   align-items: center;
   width: 43.75rem;
@@ -225,10 +231,9 @@ color: inherit;
 }
 
 .btnHome-1 a,
-.btnHome-2 a{
+.btnHome-2 a {
   text-decoration: none;
   color: #fff;
-
 }
 .btnHome-1:hover,
 .btnHome-2:hover {
@@ -243,34 +248,65 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-
 /* BTN seccion 1 */
 
 .btnpurple {
   display: flex;
-
   cursor: pointer;
-  width: 4.25rem;
-
+  width: 3.25rem;
   margin: 0 auto;
+  height: 3.25rem;
+  background: #3a07f2;
+  border-radius: 50%;
+  padding: 0.25rem;
+  color: whitesmoke;
+  border: solid 2px hsl(250deg 99% 34%);
+  transform: translate(0px, -2.125rem);
+
 }
 
-.btnpurple:hover {
+/* .btnpurple-container:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
   transition: filter 0.25s;
-}
+  transform: scale(1.05);
+  transition: all 0.2s;
+} */
+
+.btnpurple-container{
+  animation: bouncing  1.4s  infinite;
+ }
+  
+  @keyframes bouncing {
+    0% {
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(0.3125rem);
+    }
+  }
+
+  .btnpurple-container2{
+    animation: bouncing  1.4s  infinite;
+   }
+    
+    @keyframes bouncing {
+      0% {
+        transform: translateY(0);
+      }
+      50%{
+        transform: translateY(5px);
+      }
+    }
 
 /* seccion 2 - boxes */
 
-.inicio2{
-
-
+.inicio2 {
   display: grid;
   grid:
-  "Box-1      . " 14rem
-  "Box-img    . " 14rem
-  ".       Box-2" 14rem /
-  50% 50%;     
+    "Box-1      . " 14rem
+    "Box-img    . " 14rem
+    ".       Box-2" 14rem /
+    50% 50%;
 
   height: 44rem;
   width: 80%;
@@ -293,11 +329,9 @@ button:focus-visible {
   border-radius: 1.5625rem;
   z-index: 1;
   grid-area: Box-1;
- 
-  
 }
 
-.Box-img{
+.Box-img {
   grid-area: Box-img;
 }
 
@@ -317,15 +351,7 @@ button:focus-visible {
   font-weight: 600;
 }
 
-.circle-7 {
-  position: absolute;
-  width: 14.375rem;
-  height: 14.375rem;
-  left: 47.25rem;
-  top: 36.75rem;
-  background: var(--pale-pink);
-  border-radius: 50%;
-}
+
 
 .circle-8 {
   width: 23.75rem;
@@ -350,8 +376,6 @@ button:focus-visible {
   z-index: 1;
 
   grid-area: Box-2;
- 
- 
 
   background: var(--lila-color);
 
@@ -361,80 +385,66 @@ button:focus-visible {
 
 .lineHome {
   position: absolute;
-  transform: translate(0.6875rem,3.75rem);
+  transform: translate(0.6875rem, 11.75rem);
   height: 41rem;
 }
 
 /* GRID  */
 
-.grid{
+.grid {
   display: grid;
-  grid: "elem-1 number number-section_container" 32.5rem/ 33% 14% 58%;
+  grid: "elem-1 number number-section_container" auto/ 33% 14% 58%;
   width: 80%;
-  margin: 7rem auto;
-
+  margin: 0 auto 4rem auto;
 }
 
 .grid2 {
   display: grid;
-  grid: "number-section_container2 number2 elem-2" 34.5rem/ 43% 21% 33%;
-  /* gap: 8rem 0rem; */
+  grid: "number-section_container2 number2 elem-2" auto/ 43% 21% 33%;
   width: 80%;
-  margin: 0 auto;
-  height: 40rem;
+  margin: 0 auto 4rem auto;
+
 }
 
 .grid3 {
   display: grid;
-  grid: "elem-3 number3 number-section_container3" 44.5rem/ 25% 18% 66%;
-  gap: 8rem 0rem;
+  grid: "elem-3 number3 number-section_container3" auto/ 25% 18% 66%;
   width: 80%;
-  height: 38rem;
-  margin: 0 auto;
+  margin: 0 auto 4rem auto;
+
 }
 
-
-.elem-1{
+.elem-1 {
   grid-area: elem-1;
-
 }
 
-.elem-2{
+.elem-2 {
   grid-area: elem-2;
-
 }
 
-.elem-3{
+.elem-3 {
   grid-area: elem-3;
-
 }
 
-
-.number-section_container{
-
-    grid-area: number-section_container;
+.number-section_container {
+  grid-area: number-section_container;
 }
 
-.number-section_container2{
-
+.number-section_container2 {
   grid-area: number-section_container2;
 }
 
-.number-section_container3{
-
+.number-section_container3 {
   grid-area: number-section_container3;
 }
 
 .elem-1,
 .elem-2,
-.elem-3{
+.elem-3 {
   margin: 1rem auto;
 }
 
-
 /* seccion inicio 3era parte - numeros */
-
-
 
 .number-bcg {
   width: 100%;
@@ -455,12 +465,10 @@ button:focus-visible {
   outline: 0.3125rem solid #f25757;
   outline-offset: 0.3125rem;
 }
-.number{
+.number {
   transform: translate(2px, -98px);
-      grid-area: number;
+  grid-area: number;
 }
-
-
 
 .number-section {
   font-weight: 800;
@@ -480,7 +488,7 @@ button:focus-visible {
   position: relative;
 
   padding: 1rem;
-    margin: 1rem;
+  margin: 1rem;
 }
 
 .number-section_title {
@@ -491,9 +499,22 @@ button:focus-visible {
 }
 
 .chevron-down {
-  width: 3.9375rem;
-  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
+  width: 2rem;
+  height: 2.5rem;
+  color: var(--purple-color);
+  cursor: pointer;
+  animation: bouncer  1.4s  infinite;
+
 }
+
+@keyframes bouncer {
+    0% {
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(0.2rem);
+    }
+  }
 
 .number-section_text {
   font-family: "Nunito";
@@ -504,7 +525,21 @@ button:focus-visible {
   text-align: justify;
   letter-spacing: 1.1px;
   color: #000000;
+  animation: slideText 4s;
 }
+
+@keyframes slideText{
+  from{
+    opacity:0.2;
+    
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
 
 /* segunda imagen 02. */
 
@@ -528,7 +563,7 @@ button:focus-visible {
   position: absolute;
 }
 
-.number2{
+.number2 {
   grid-area: number2;
 
   transform: translate(-71px, -6.75rem);
@@ -541,8 +576,7 @@ button:focus-visible {
   position: relative;
 
   padding: 1rem;
-    margin: 1rem;
- 
+  margin: 1rem;
 }
 
 .number-section_title2 {
@@ -560,7 +594,8 @@ button:focus-visible {
   line-height: 2.1875rem;
   color: #000000;
   text-align: justify;
-    letter-spacing: 1.1px;
+  letter-spacing: 1.1px;
+  animation: slideText 4s;
 }
 
 /* tercera imagen */
@@ -578,8 +613,6 @@ button:focus-visible {
   outline-offset: 0.3125rem;
 }
 
-
-
 .number-section_container3 {
   width: 32rem;
   display: flex;
@@ -588,7 +621,7 @@ button:focus-visible {
   position: relative;
 
   padding: 1rem;
-    margin: 1rem;
+  margin: 1rem;
 }
 
 .number-section_title3 {
@@ -607,16 +640,18 @@ button:focus-visible {
   text-align: justify;
   letter-spacing: 1.1px;
   color: #000000;
+  animation: slideText 4s;
 }
 
 .chevron-down3 {
   width: 3.9375rem;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
 }
-.number3{
+.number3 {
   grid-area: number3;
 
-  transform: translate(3.8125rem, -8.75rem);}
+  transform: translate(3.8125rem, -8.75rem);
+}
 
 .number-section3 {
   font-weight: 800;
@@ -626,81 +661,92 @@ button:focus-visible {
   position: absolute;
 }
 
-.FloatIcon-Wh{
+.btnpurple2 {
+  display: flex;
+  cursor: pointer;
+  width: 3.25rem;
+  margin: 0 auto;
+  height: 3.25rem;
+  background: #3a07f2;
+  border-radius: 50%;
+  padding: 0.25rem;
+  color: whitesmoke;
+  border: solid 2px hsl(250deg 99% 34%);
+
+}
+
+.FloatIcon-Wh {
   bottom: 2.5rem;
-    left: 1.25rem;
-    opacity: 1;
-    transition: opacity 0.5s ease 0s;
-    box-sizing: border-box;
-    direction: ltr;
-    text-align: right;
-    position: fixed !important;
-    z-index: 1 !important;
-    animation: shake 2s infinite;
+  left: 1.25rem;
+  opacity: 1;
+  transition: opacity 0.5s ease 0s;
+  box-sizing: border-box;
+  direction: ltr;
+  text-align: right;
+  position: fixed !important;
+  z-index: 1 !important;
+  animation: shake 2s infinite;
 }
 
 @keyframes shake {
-  10% {transform: scale(1.05) rotate(5deg);}
-  20% {transform: scale(1.05) rotate(-5deg);}
-  30% {transform: scale(1.05) rotate(5deg);}
-  40% {transform: none;}
+  10% {
+    transform: scale(1.05) rotate(5deg);
+  }
+  20% {
+    transform: scale(1.05) rotate(-5deg);
+  }
+  30% {
+    transform: scale(1.05) rotate(5deg);
+  }
+  40% {
+    transform: none;
+  }
 }
 
 .FloatIcon {
   margin-bottom: 0;
-  margin-left: 0.1875rem!important;
-
+  margin-left: 0.1875rem !important;
 }
 
-.FloatIcon img{
+.FloatIcon img {
   width: 4.625rem;
-    height: 4.625rem;
-    border-radius: 50%;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  height: 4.625rem;
+  border-radius: 50%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-@media screen and (max-width: 1170px){
-.grid{
-width: 100%;
-}
-.grid2{
-  width: 100%;
+@media screen and (max-width: 1170px) {
+  .grid {
+    width: 100%;
+  }
+  .grid2 {
+    width: 100%;
+  }
 
-}
-
-.grid3{
-  width: 100%;
-
-}
-
+  .grid3 {
+    width: 100%;
+  }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
   html,
   body {
     font-size: 14px;
   }
-
 }
 
-@media screen and (min-width: 940px){
- .nav-item:hover .ico {
-  display: inline-block;
-  left: 0.2rem;
- 
-} 
+@media screen and (min-width: 940px) {
+  .nav-item:hover .ico {
+    display: inline-block;
+    left: 0.2rem;
+  }
 }
-
-
-
 
 @media screen and (max-width: 940px) {
   html,
   body {
     font-size: 12px;
   }
-
-
 
   .hamburger {
     padding-right: 0.625rem;
@@ -711,7 +757,7 @@ width: 100%;
     width: 100%;
   }
 
-  .hamburger img{
+  .hamburger img {
     z-index: 2;
     width: 4rem;
     display: flex;
@@ -739,194 +785,151 @@ width: 100%;
     left: 0;
   }
 
-
   .nav-item:hover {
     border-right: 0.375rem solid hsla(10, 100%, 66%, 0.8);
     transition: 1.4s;
   }
-
-
-
-
 }
 
-
 @media only screen and (max-width: 805px) {
-
   html,
   body {
     font-size: 10px;
   }
 
-.btns-home{
-  flex-direction: column;
-  align-items: flex-start;
+  .btns-home {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btnpurple-container {
+    margin: 2rem auto;
+  }
 }
-
-.btnpurple-container{
-  margin: 2rem auto;
-}
-
-
-
-
-}
-
 
 @media only screen and (max-width: 600px) {
   html,
   body {
     font-size: 8px;
   }
-
-
 }
 
-
-
-@media only screen and (max-width: 599px){
-  
-  .navbar-logos{
+@media only screen and (max-width: 599px) {
+  .navbar-logos {
     margin-left: 2rem;
   }
   .TitleContainer {
     margin-left: 2rem;
   }
 
-  .TextContainer{
+  .TextContainer {
     margin-left: 2rem;
   }
 
-  .btns-home{
+  .btns-home {
     margin-left: 2rem;
   }
 
-  .inicio2{
+  .inicio2 {
     display: grid;
     grid:
-        "Box-1 . " 14rem
-        "Box-img . " 14rem
-        ". Box-2" 14rem / 18% 50%;
-        width: 65%;
+      "Box-1 . " 14rem
+      "Box-img . " 14rem
+      ". Box-2" 14rem / 18% 50%;
+    width: 65%;
   }
 
- .grid {
-  grid: "elem-1 number number-section_container" 32.5rem/ 33% 6% 58%;
-  } 
+  .grid {
+    grid: "elem-1 number number-section_container" auto/ 33% 6% 58%;
+  }
 
   .grid2 {
-     margin: 4rem auto;
+    margin: 4rem auto;
   }
 
- .grid3 {
-height: 45rem;
-grid: "elem-3 number3 number-section_container3" 44.5rem/ 25% 13% 66%;
-} 
-/* .number-section_title2 {
-   width: 28rem;
-} */
-
-/* .number-section_text2 {
- 
-  height: 24rem;
-  width: 28rem;
-} */
-
-.number {
-  transform: translate(22px, -61px);
-}
-.number2 {
-  transform: translate(-77px, -6.75rem);
-}
-
-.number3 {
-  transform: translate(18px, -8.75rem);
-}
-
-.number-section_container{
-  width: 27rem;
-}
- .number-section_container2{
-      width: 27rem;
-    
-    height: 38rem;
- }
-
-.number-section_container3 {
-  width: 27rem;
-  height: 40rem;
-}
-
-.circle-img1 {
-  width: 16rem;
-  height: 16rem;
-} 
-.circle-img2 {
-  width: 16rem;
-  height: 16rem;
-}
-
-.circle-img3 {
-  width: 16rem;
-  height: 16rem;
-} 
+  .grid3 {
+    grid: "elem-3 number3 number-section_container3" auto/ 25% 13% 66%;
+  }
 
 
+  .number {
+    transform: translate(22px, -61px);
+  }
+  .number2 {
+    transform: translate(-77px, -6.75rem);
+  }
 
-.Serv-container {
+  .number3 {
+    transform: translate(18px, -8.75rem);
+  }
 
-  margin-bottom: 4rem;
+  .number-section_container {
+    width: 27rem;
+  }
+  .number-section_container2 {
+    width: 27rem;
+
+    height: auto;
+  }
+
+  .number-section_container3 {
+    width: 27rem;
+    height: auto;
+  }
+
+  .circle-img1 {
+    width: 16rem;
+    height: 16rem;
+  }
+  .circle-img2 {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .circle-img3 {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .Serv-container {
+    margin-bottom: 4rem;
+  }
+
+  .trab-container {
+    height: 29rem;
+  }
 }
 
-.trab-container {
- 
-  height: 29rem;
-}
-
-}
-
-@media only screen and (min-width: 600px){
-  .inicio2{
+@media only screen and (min-width: 600px) {
+  .inicio2 {
     display: grid;
     grid:
-    "Box-1     0 " 15.625rem
-    "Box-img Box-2"15.625rem/
-    50% 50%;      
-   
-
+      "Box-1     0 " 15.625rem
+      "Box-img Box-2" 15.625rem/
+      50% 50%;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .inicio2{
+  .inicio2 {
     display: grid;
     grid:
-    "Box-1     0 " 15.625rem
-    "Box-img Box-2" 15.625rem/
-    36% 50%;      
-   
-
+      "Box-1     0 " 15.625rem
+      "Box-img Box-2" 15.625rem/
+      36% 50%;
   }
 
-  .Box-2{
+  .Box-2 {
     margin: 1.5rem 5rem;
   }
-
-
-
-
 }
 
 @media only screen and (min-width: 1200px) {
-
-  .inicio2{
+  .inicio2 {
     display: grid;
     grid:
-    "Box-1 . . " 8rem
-    ". Box-img ." 8rem
-    ". . Box-2" 12rem/ 30% 26% 22%;    
-   
-
+      "Box-1 . . " 8rem
+      ". Box-img ." 8rem
+      ". . Box-2" 12rem/ 30% 26% 22%;
   }
-
 }

@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Servicios.css";
 import person from "../assets/bxs-group.svg";
 import read from "../assets/read.svg";
 
-import down from "../assets/chevron-down.svg";
 import dots from "../assets/dots.svg";
 
-
+import {FiChevronDown,FiChevronUp} from "react-icons/fi";
 import Slider from "./Slider";
 
 const Servicios = () => {
+  const [click, setClick] = useState(false);
+
+  const [open, setOpen] = useState(false);
+  const handleClick = () => setClick(!click);
+
+  const [click2, setClick2] = useState(false);
+
+
+  const handleClick2 = () => setClick2(!click2);
+
+  useEffect(() => {
+    let handler = () => {
+      setClick(false);
+      setClick2(false);
+    
+    };
+    document.addEventListener("mousedown", handler)
+  })
+
+
   return (
     <>
       <section
@@ -29,16 +48,16 @@ const Servicios = () => {
         </div>
 
         <div className="Serv-box-container">
-          <div className="Serv-box">
+          <div  className={click ? "Serv-box open" : "Serv-box"}>
             <div className="circle-purple">
               <img style={{ width: "3.125rem" }} src={person} alt="person" />
             </div>
 
-            <div className="Serv-box-content">
+            <div className=" Serv-box-content" >
               <h5 className="Serv-box-title">
                 IT recruiting y Gestión del Talento{" "}
               </h5>
-              <div style={{ height: "4.5rem", overflowY: "clip" }}>
+              <div className={click ? "Serv-box-text open" : "Serv-box-text"}>
                 <ul>
                   <li>Planificación Estratégica</li>
                   <li>Sourcing y Headhunting.</li>
@@ -47,21 +66,35 @@ const Servicios = () => {
                   <li>Onboarding.</li>
                 </ul>
               </div>
-              <img className="chevron-down_svs" src={down} alt="" />
+              <div onClick={handleClick} >
+                {!click ? (
+                  <FiChevronDown className="chevron-down_svs open" />
+                ) : (
+                  <FiChevronUp className="chevron-up"/>
+
+                )}
+
+              </div>
+             {/*  <FiChevronDown onClick={() => setOpen(!open)} 
+              className={open ? "chevron-down_svs open"
+              
+              : "chevron-down_svs"}/> */}
+
+              
             </div>
           </div>
 
-          <div className="Serv-box">
+          <div className={click2 ? "Serv-box2 open" : "Serv-box2"}>
             <div className="circle-purple">
               <img style={{ width: "3.125rem" }} src={read} alt="read" />
             </div>
 
-            <div className="Serv-box-content">
+            <div className="Serv-box-content2">
               <h5 className="Serv-box-title">
                 Soft Skill Trainings para la Industria IT
               </h5>
 
-              <div style={{ height: "4.5rem", overflowY: "clip" }}>
+              <div className={click2 ? "Serv-box-text2 open" : "Serv-box-text2"}>
                 <ul>
                   <li>
                     Soft Skills para el desarrollo profesional y la gestión de
@@ -75,7 +108,15 @@ const Servicios = () => {
                 </ul>
               </div>
 
-              <img className="chevron-down_svs " src={down} alt="" />
+              <div onClick={handleClick2}>
+                {!click2 ? (
+                  <FiChevronDown className="chevron-down_svs2 open"/>
+                ) : (
+                  <FiChevronUp className="chevron-up2"/>
+
+                )}
+
+              </div>
             </div>
           </div>
         </div>

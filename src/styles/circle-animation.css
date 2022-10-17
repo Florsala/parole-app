@@ -1,74 +1,128 @@
-
 .circle-1 {
   position: absolute;
-  width: 10rem;
-  height: 10rem;
-  left: 0rem;
-  top: 20.3125rem;
-  background: var(--pale-pink);
-  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  right: 26rem;
+  top: 25.3125rem;
+  background: rgb(255,82,82);
+  background: linear-gradient(0deg, rgba(255,82,82,0.742734593837535) 0%, rgba(255,82,86,0.11808473389355745) 100%);  border-radius: 50%;
 
-  animation: moving 5s linear infinite;
+  animation: moving 12s ease infinite;
 }
 
 @keyframes moving {
-  0%{
-    left: 0rem;
-    top: 20.3125rem;
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    rotate: (0deg);
   }
 
-  25% {
-    right: 5.9375rem;
-    top: 19rem;
+  15% {
+    width: 12rem;
+    height: 12rem;
+    opacity: 0.7;
+    transform: translateX(10px);
+    rotate: (120deg);
   }
+
+  
 
   50% {
-    right: 7.9375rem;
-    top: 17rem;
-  }
-  75%{
-    right: 8.9375rem;
-    top: 15rem;
+    opacity: 0.3;
+    transform: translateX(30px);
+    rotate: (620deg);
   }
 
-  100%{
-    top: 11rem;
+  75% {
+    opacity: 0.5;
+    transform: translateX(50px);
+    rotate: (520deg);
   }
-
-  125%{
-    top: 8rem;
-  }
-
-  150%{
-    top: 5rem;
+  100% {
+    opacity: 0;
+    transform: translateY(-1000px);
+    rotate: (720deg);
   }
 }
 
-.circle-2,
+.circle-2 {
+  position: absolute;
+  top: -4rem;
+  right: -4.125rem;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background: rgb(255,82,82);
+background: linear-gradient(0deg, rgba(255,82,82,1) 0%, rgba(255,82,86,0.11808473389355745) 100%);
+  animation: circleMove 10s cubic-bezier(0.4, 0, 1, 1) infinite;
+  top: 5rem;
+}
+
+@keyframes circleMove {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    rotate: (0deg);
+  }
+
+  15% {
+    
+    opacity: 0.7;
+    transform: translateY(-50px);
+    rotate: (120deg);
+  }
+
+ 
+
+  75% {
+    opacity: 0.5;
+    transform: translateX(-50px);
+    rotate: (520deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-400px);
+    rotate: (720deg);
+  }
+}
 .circle-3 {
   position: absolute;
-  width: 26.25rem;
-  height: 26.25rem;
+  width: 6rem;
+  opacity: 0.2;
+  left: 20rem;
+  height: 6rem;
   border-radius: 50%;
-  background: var(--pale-pink);
-}
-.circle-2 {
-  left: 51.625rem;
-  top: 11.6875rem;
-  background: radial-gradient(circle, rgba(255,82,82,0.003) 59%, rgba(220,87,87,1) 100%);
+  background: rgb(255,82,82);
+  background: linear-gradient(0deg, rgba(255,82,82,1) 0%, rgba(255,82,86,0.11808473389355745) 100%);  animation: moving3 12s linear infinite;
 }
 
+@keyframes moving3 {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    rotate: (0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-1000px);
+    rotate: (720deg);
+  }
+}
+
+
+
 .circle-3 {
-  left: 57.5625rem;
-  top: 18.0625rem;
+  margin-left: 5rem;
+  opacity: 0;
 }
 
 .circle-4 {
   position: absolute;
-  width: 25.3125rem;
-  height: 25.3125rem;
-  right: 2.5rem;
-  top: 14.25rem;
+  width: 24rem;
+  height: 24rem;
+  top: 17rem;
+  right: 4rem;
   border-radius: 50%;
   border: 0.25rem dashed rgba(86, 22, 238, 0.2);
 }
@@ -76,47 +130,56 @@
   position: absolute;
   width: 5rem;
   height: 5rem;
-  left: 44.625rem;
-  top: 22.75rem;
+  opacity: 0.3;
   border-radius: 50%;
   background: var(--pale-pink);
   animation: moving2 5s linear infinite;
 }
 
-
 @keyframes moving2 {
-    0%{
-        left: 44.625rem;
-        top: 22.75rem;
-    }
-  
-    25% {
-        left: 45.625rem;
-        top: 22.75rem;
-    }
-  
-    50% {
-        left: 47.625rem;
-        bottom: 20.75rem;
-    }
-    75%{
-        left: 49.625rem;
-        top: 22.75rem;
-    }
-
-    100%{
-        left: 51.625rem;
-  top: 22.75rem;
-    }
+  0% {
+    opacity: 1;
+    transform: translateY(0);
   }
 
+  
 
+  100% {
+    opacity: 0;
+    transform: translateY(-1000px);
+  }
+}
 
 .circle-6 {
   position: absolute;
   width: 18.0625rem;
   height: 16.1875rem;
-  left: 19.625rem;
+
   border-radius: 50%;
   border: 0.25rem dashed rgba(86, 22, 238, 0.15);
+}
+
+.circle-7 {
+  position: absolute;
+  width: 14.375rem;
+  height: 14.375rem;
+  left: 47.25rem;
+  top: 36.75rem;
+  background: var(--pale-pink);
+  border-radius: 50%;
+  animation: moving7 9s linear infinite;
+}
+
+@keyframes moving7 {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    rotate: (0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-1000px);
+    rotate: (720deg);
+  }
 }

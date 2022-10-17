@@ -24,7 +24,7 @@
 
 
 .footer-icons img:hover{
-animation: bounce  0.4s cubic-bezier(0.59, -0.67, 0.24, 0.79) 2;
+animation: bounce  2s ease-in-out;
 animation-direction: alternate;
 }
 
@@ -33,7 +33,7 @@ animation-direction: alternate;
     transform: translateY(0);
   }
   100%{
-    transform: translateY(-3.5rem);
+    transform: translateY(-2.5rem);
   }
 }
 

@@ -10,6 +10,7 @@ import Equipo from "./components/Equipo";
 import Contacto from "./components/Contacto";
 import Footer from "./components/Footer";
 import Whatsapp from "./components/Whatsapp";
+import ScrollToTop from "./components/ScrollToTop"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Equipo />
       <Contacto />
       <Whatsapp/>
+      <ScrollToTop/>
 
       <Footer />
     </div>

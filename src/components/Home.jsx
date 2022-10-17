@@ -1,19 +1,36 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import LineTitle from "../assets/LineTitle.svg";
-import btnpurple from "../assets/btn-purple.svg";
 import lineHome from "../assets/line-home.svg";
 
-import down from "../assets/chevron-down.svg";
 import dots from "../assets/dots.svg";
 import { HashLink as Link } from "react-router-hash-link";
 
-import '../styles/circle-animation.css'
+import { FiChevronsDown } from "react-icons/fi"; 
+import { GoChevronDown } from "react-icons/go";
+
+import "../styles/circle-animation.css";
 
 const Home = () => {
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  const [open3, setOpen3] = useState(false);
+
+  let mainRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!mainRef.current.contains(e.target)) {
+        setOpen(false);
+        setOpen2(false);
+        setOpen3(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+  });
+
   return (
     <div>
       <section id="inicio">
-        <div className="circle-1"></div>
         <div className="TitleContainer">
           <h1 className="Title">
             Soluciones para la gestión del
@@ -48,26 +65,30 @@ const Home = () => {
               </Link>
             </button>
           </div>
-
-          <div className="btnpurple-container" style={{ flexGrow: "3" }}>
-            <Link to="/#inicio-2p" smooth>
-              <img className="btnpurple" src={btnpurple} alt="" />
-            </Link>
-          </div>
+        </div>
+        <div className="btnpurple-container">
+          <Link to="/#inicio-2p" smooth>
+            <FiChevronsDown className="btnpurple" />
+          </Link>
         </div>
 
+        <div style={{overflow:"hidden", width:'100vw'}}>
+          <div className="circle-1"></div>
         <div className="circle-2"></div>
         <div className="circle-3"></div>
         <div className="circle-4"></div>
         <div className="circle-5"></div>
+        <div className="circle-6"></div>
+        <div className="circle-7"></div>
+        </div>
+        
       </section>
 
       <section id="inicio-2p">
         <div>
           <img className="lineHome" src={lineHome} alt="linea" />
         </div>
-        <div className="circle-6"></div>
-        <div className="circle-7"></div>
+       
 
         <div className="inicio2">
           <div className="Box-1">
@@ -116,20 +137,24 @@ const Home = () => {
             <p className="number-section"> 01.</p>
           </div>
 
-          <div className="number-section_container">
+          <div className="number-section_container" ref={mainRef}>
             <h5 className="number-section_title">
               Estamos enfocados en conectar con tus necesidades de staffing
             </h5>
 
-            <img className="chevron-down" src={down} alt="chevron" />
-
-            <p className="number-section_text">
-              Nuestro servicio de IT Recruiting comprende tareas de sourcing
-              adaptadas a los ritmos rápidos del sector. Co-creamos junto con
-              cada cliente un proceso de búsqueda apuntado a lograr una conexión
-              significativa con los valores, intereses y objetivos de la
-              organización.
-            </p>
+            <GoChevronDown
+              className="chevron-down"
+              onClick={() => setOpen(!open)}
+            />
+            {open && (
+              <p className="number-section_text">
+                Nuestro servicio de IT Recruiting comprende tareas de sourcing
+                adaptadas a los ritmos rápidos del sector. Co-creamos junto con
+                cada cliente un proceso de búsqueda apuntado a lograr una
+                conexión significativa con los valores, intereses y objetivos de
+                la organización.
+              </p>
+            )}
           </div>
         </div>
 
@@ -152,16 +177,20 @@ const Home = () => {
               Somos expertos en comunicación y aplicación de Soft Skills{" "}
             </h5>
 
-            <img className="chevron-down" src={down} alt="chevron" />
-
-            <p className="number-section_text2">
-              Trabajamos trainings dinámicos y participativos para optimizar los
-              vínculos dentro de las compañías y ofrecer soporte a su cultura
-              interna. Al trabajar el desarrollo de soft skills con su staff,
-              las empresas obtienen relaciones interpersonales fuertes,
-              reducción del índice de rotación, mejora del índice de calidad y
-              maximización del potencial de los colaboradores.
-            </p>
+            <GoChevronDown
+              className="chevron-down"
+              onClick={() => setOpen2(!open)}
+            />
+            {open2 && (
+              <p className="number-section_text2">
+                Trabajamos trainings dinámicos y participativos para optimizar
+                los vínculos dentro de las compañías y ofrecer soporte a su
+                cultura interna. Al trabajar el desarrollo de soft skills con su
+                staff, las empresas obtienen relaciones interpersonales fuertes,
+                reducción del índice de rotación, mejora del índice de calidad y
+                maximización del potencial de los colaboradores.
+              </p>
+            )}
           </div>
         </div>
         {/* tercera imagen */}
@@ -184,21 +213,33 @@ const Home = () => {
               remotos{" "}
             </h5>
 
-            <img className="chevron-down3" src={down} alt="chevron" />
-
-            <p className="number-section_text3">
-              Trabajamos en modalidad online desde que Parole nació en 2017
-              porque entendimos la necesidad de conexión remota que ya había en
-              aquel momento. Decidimos seguir por esa línea convirtiéndonos en
-              expertos en el sector IT que fue el que más rápido se adaptó a la
-              tendencia y se subió a la ola de transformación digital. Hoy desde
-              la virtualidad llegamos a clientes de todo el mundo con nuestros
-              servicios de Recruiting y Soft Skills Training.
-            </p>
+            <GoChevronDown
+              className="chevron-down"
+              onClick={() => setOpen3(!open)}
+            />
+            {open3 && (
+              <p className="number-section_text3">
+                Trabajamos en modalidad online desde que Parole nació en 2017
+                porque entendimos la necesidad de conexión remota que ya había
+                en aquel momento. Decidimos seguir por esa línea convirtiéndonos
+                en expertos en el sector IT que fue el que más rápido se adaptó
+                a la tendencia y se subió a la ola de transformación digital.
+                Hoy desde la virtualidad llegamos a clientes de todo el mundo
+                con nuestros servicios de Recruiting y Soft Skills Training.
+              </p>
+            )}
           </div>
         </div>
-        <div>
-          <img className="btnpurple" src={btnpurple} alt="" />
+        <div
+          className="btnpurple-container2"
+          style={{ display: "flex", justifyContent: "center" }}
+        >
+          <Link to="/#servicios" smooth>
+            <FiChevronsDown
+              className="btnpurple2"
+              style={{ position: "absolute" }}
+            />
+          </Link>
         </div>
       </section>
     </div>

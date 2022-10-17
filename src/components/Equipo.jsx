@@ -7,6 +7,9 @@ import Lorena from "../assets/Equipo/lore2.png";
 
 import Daiana from "../assets/Equipo/Dai2-1.png";
 
+import { BsPaperclip } from "react-icons/bs";
+
+
 import "../styles/Form.css";
 
 const Equipo = () => {
@@ -112,7 +115,8 @@ const Equipo = () => {
               Enviar
             </button>
 
-            <div style={{ marginRight: "auto", padding: "1rem" }}>
+            <div style={{ marginRight: "auto", padding: "1rem", display:'flex' }}>
+            <BsPaperclip style={{    width: '1.5rem',color: 'white',height: '1.5rem'}}/>
               <p className="cv"> Adjuntar CV</p>
             </div>
           </div>

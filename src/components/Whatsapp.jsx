@@ -7,7 +7,7 @@ const Whatsapp = () => {
       <a
       className="FloatIcon"
         style={{ color: "#ffff" }}
-        href=""
+        href="https://wa.me/542214955544"
         target={"blank"}
       >
         <img src={Whats} alt="whatsapp" />
