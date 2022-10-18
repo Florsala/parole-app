@@ -124,3 +124,11 @@
   font-size: 3.125rem;
   color: #e7e6e9;
 }
+
+
+.line7{
+  position:absolute;
+  width: 33.4375rem;
+    height: 33.4375rem;
+    transform: translate(-8.1875rem, 0.625rem);
+}

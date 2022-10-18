@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/Equipo.css";
 import dots from "../assets/dots.svg";
 
@@ -9,10 +9,23 @@ import Daiana from "../assets/Equipo/Dai2-1.png";
 
 import { BsPaperclip } from "react-icons/bs";
 
+import line7 from '../assets/line7.svg'
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import "../styles/Form.css";
 
+
+
+
 const Equipo = () => {
+
+  useEffect(() => {
+    AOS.init({duration: 2000});
+  }, [])
+
+
   return (
     <div
     id="nosotros"
@@ -30,7 +43,7 @@ const Equipo = () => {
         <div className="Eq-circle-dash"></div>
       </div>
       <div className="Eq-container-p">
-        <div className="Eq-container-p-box">
+        <div className="Eq-container-p-box" >
           <div className="box-img">
             <img src={Dana} alt="Dana Licht" />
             <div className="drop"></div>
@@ -46,8 +59,8 @@ const Equipo = () => {
           </div>
         </div>
 
-        <div className="Eq-container-p-box">
-          <div className="box-img">
+        <div className="Eq-container-p-box" >
+          <div className="box-img" >
             <img src={Lorena} alt="Lorena Nardi" />
             <div className="drop"></div>
           </div>
@@ -61,8 +74,8 @@ const Equipo = () => {
             </ul>
           </div>
         </div>
-
-        <div className="Eq-container-p-box">
+ 
+        <div className="Eq-container-p-box"   >
           <div className="box-img">
             <img src={Daiana} alt="Daiana Perez" />
             <div className="drop"></div>
@@ -80,7 +93,10 @@ const Equipo = () => {
         </div>
       </div>
 
+
       <div className="trab-container">
+      <img src={line7} alt="" className="line7"/>
+
         <div className="trab-container-text">
           <h3>Trabajá con nosotros</h3>
         </div>

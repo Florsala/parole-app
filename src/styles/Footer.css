@@ -20,11 +20,13 @@
   border-radius: 50%;
   padding: 0.5rem;
   margin: 0.5rem;
+  z-index: 2;
+    position: relative;
 }
 
 
 .footer-icons img:hover{
-animation: bounce  2s ease-in-out;
+animation: bounce  1s ease-in-out;
 animation-direction: alternate;
 }
 
@@ -33,12 +35,13 @@ animation-direction: alternate;
     transform: translateY(0);
   }
   100%{
-    transform: translateY(-2.5rem);
+    transform: translateY(-0.5rem);
   }
 }
 
 .footer-text {
   text-align: center;
+  margin-top: 2rem;
 }
 
 .footer-text h4 {
@@ -80,4 +83,12 @@ animation-direction: alternate;
   padding: 1rem;
   font-weight: 400;
   color: whitesmoke;
+}
+
+
+.lineFooter{
+  position: absolute;
+  width: 52.375rem;
+  height: 46.4375rem;
+  transform: translate(3.8125rem, -42.6875rem);
 }

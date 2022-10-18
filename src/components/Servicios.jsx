@@ -8,6 +8,8 @@ import dots from "../assets/dots.svg";
 import {FiChevronDown,FiChevronUp} from "react-icons/fi";
 import Slider from "./Slider";
 
+import line4 from "../assets/Line4.svg"
+
 const Servicios = () => {
   const [click, setClick] = useState(false);
 
@@ -123,6 +125,7 @@ const Servicios = () => {
       </section>
 
       <section>
+        <img src={line4} alt="" className="line4"/>
         <div className="Serv-container">
           <h2 className="Serv-title">Quiénes confían en nosotros</h2>
 

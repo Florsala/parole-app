@@ -7,8 +7,7 @@ import Facebook from "../assets/media/facebook.svg";
 import Instagram from "../assets/media/instagram.svg";
 
 import Envelope from "../assets/envelope.svg";
-import Location from "../assets/map.svg";
-
+import lineFooter from "../assets/lineFooter.svg"
 const Footer = () => {
   return (
     <div>
@@ -24,6 +23,8 @@ const Footer = () => {
         </div>
       </div>
 
+      <img src={lineFooter} alt="" className="lineFooter"/>
+
       <div className="container-info">
         <div className="footer-text">
           <h4>
@@ -32,10 +33,13 @@ const Footer = () => {
             </span>
             Contacto
           </h4>
-          <div style={{fontSize:"1.1rem"}}>
+          <div style={{fontSize:"1.1rem",    marginTop: '0.4rem'}}>
              <p>contacto@parole.com.ar</p>
           <p>Tel: +542214955544</p>
           <p>Tel: +54 261 6688190</p>
+          </div>
+          <div style={{fontSize:"1.2rem", marginTop:'1rem'}}>
+            <p>La Plata - Buenos Aires - Argentina</p>
           </div>
          
         </div>
