@@ -26,7 +26,17 @@ useEffect(() => {
 
 
     const [click, setClick] = useState(false)
-    const handleClick = () => setClick(!click);
+
+    const handleClick = (e) => {
+
+       setClick(!click);
+
+       console.log(e.target);
+    } 
+
+    const closeMenu = () => setClick(false);
+
+
   
     const [open, setOpen] = useState(false);
    /*  const [open2, setOpen2] = useState(false);

@@ -529,6 +529,8 @@ button:focus-visible {
   animation: slideText 4s;
 }
 
+
+
 @keyframes slideText{
   from{
     opacity:0.2;
