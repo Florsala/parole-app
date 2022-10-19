@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "../styles/Equipo.css";
 import dots from "../assets/dots.svg";
 
@@ -11,15 +12,74 @@ import { BsPaperclip } from "react-icons/bs";
 
 import line7 from "../assets/line7.svg";
 
+import {TiInputChecked} from "react-icons/ti";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 import "../styles/Form.css";
 
 const Equipo = () => {
+
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
+
+  const [inputNombre, cambiarInputNombre] = useState("");
+  const [inputCorreo, cambiarInputCorreo] = useState("");
+  const [inputMsg, cambiarInputMsg] = useState("");
+  const [sentForm, setSentForm] = useState(false);
+
+  const form = useRef();
+
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setSentForm(true);
+   
+
+    emailjs
+      .sendForm(
+        "service_o0t5z56",
+        "template_a03p9hn",
+        form.current,
+        "BsfYLVTbz5mz1AsJg"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          cambiarInputNombre("");
+          cambiarInputCorreo("");
+          cambiarInputMsg("");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+
+    console.log("Formulario Enviado!");
+  };
+
+  const handleInputNombre = (e) => {
+    cambiarInputNombre(e.target.value);
+  };
+
+  const handleInputCorreo = (e) => {
+    cambiarInputCorreo(e.target.value);
+  };
+
+ 
+
+  const handleInputMsg = (e) => {
+    cambiarInputMsg(e.target.value);
+  };
+
+
 
   return (
     <div
@@ -95,15 +155,15 @@ const Equipo = () => {
           <h3>Trabajá con nosotros</h3>
         </div>
 
-        <form action="" className="form">
+        <form ref={form} onSubmit={sendEmail}  className="form">
           <div style={{ width: "100%", display: "flex", flexFlow: "row wrap" }}>
             <input
               type="text"
               name="email"
               placeholder="Email"
               id="email"
-              /*  value={inputNombre}
-            onChange={handleInputNombre} */
+               value={inputCorreo}
+            onChange={handleInputCorreo} 
               required
             />
 
@@ -115,14 +175,13 @@ const Equipo = () => {
               aria-required="true"
               aria-invalid="false"
               placeholder="Tu mensaje"
-              /*  value={inputMsg}
-            onChange={handleInputMsg} */
+                value={inputMsg}
+            onChange={handleInputMsg} 
               required
             />
 
-            <button className="btnForm" type="submit" value="Enviar">
-              Enviar
-            </button>
+            <input className="btnForm" type="submit" value="Enviar"          
+            />
 
             <div
               style={{ marginRight: "auto", padding: "1rem", display: "flex", flexDirection: "column" }}
@@ -141,6 +200,10 @@ const Equipo = () => {
                 Adjuntar CV
               </label>
               <input className="attach" type="file" name="my_file" />
+              {sentForm && ( <div style={{display:'flex', color:'white', alignItems:'center'}}>  <TiInputChecked style={{fontSize:'2rem'}}/> <p className="exito"> Formulario enviado con éxito</p></div>)
+
+               }
+                        
             </div>
           </div>
         </form>

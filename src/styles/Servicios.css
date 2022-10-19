@@ -47,37 +47,23 @@
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0px 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
   border-radius: 1.5625rem;
-  transition: all 2s;
-}
+/*   transition: all 2s;
+ */}
 
 .Serv-box.open,
 .Serv-box2.open {
   height: 35rem;
-  transition: height 1s;
+ /*  transition: height 0.2s;  */
 }
 
 .Serv-box-text,
 .Serv-box-text2 {
   height: 4.5rem;
-  overflow-y: clip;
 }
 
-.Serv-box-text.open,
-.Serv-box-text2.open {
-  overflow-y: visible;
-  transition: overflow-y 2s;
-  animation: slideText2 4s;
-}
 
-@keyframes slideText2 {
-  from {
-    opacity: 0.1;
-  }
 
-  to {
-    opacity: 1;
-  }
-}
+
 
 .circle-purple {
   width: 5.9444rem;
@@ -126,16 +112,14 @@
   height: 3rem;
   color: var(--purple-color);
   cursor: pointer;
-  /*     transition: all 2s;
- */
+  
 }
 
 .chevron-down_svs.open,
 .chevron-down_svs2.open {
   transition: 4s ease all;
 
-  /*   display: none; 
- */
+ 
 }
 
 .chevron-up,
@@ -145,9 +129,8 @@
   color: var(--purple-color);
   cursor: pointer;
   width: 5rem;
-  transition: margin-top 2s;
-  position: fixed;
-}
+/*   transition: margin-top 2s;
+ */}
 
 
 

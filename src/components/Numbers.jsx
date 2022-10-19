@@ -2,10 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 
 
 import dots from "../assets/dots.svg";
-import { HashLink as Link } from "react-router-hash-link";
-
-import { FiChevronsDown } from "react-icons/fi"; 
-import { GoChevronDown } from "react-icons/go";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';

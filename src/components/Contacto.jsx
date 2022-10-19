@@ -1,9 +1,68 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "../styles/Contacto.css";
+
+import {TiInputChecked} from "react-icons/ti";
+
 
 import Mail from "../assets/mailbox.svg";
 
 const Contacto = () => {
+
+
+  const [inputNombre, cambiarInputNombre] = useState("");
+  const [inputCorreo, cambiarInputCorreo] = useState("");
+  const [inputMsg, cambiarInputMsg] = useState("");
+  const [sentForm, setSentForm] = useState(false);
+
+  const form = useRef();
+
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setSentForm(true);
+   
+
+    emailjs
+      .sendForm(
+        "service_o0t5z56",
+        "template_a03p9hn",
+        form.current,
+        "BsfYLVTbz5mz1AsJg"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          cambiarInputNombre("");
+          cambiarInputCorreo("");
+          cambiarInputMsg("");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+
+    console.log("Formulario Enviado!");
+  };
+
+  const handleInputNombre = (e) => {
+    cambiarInputNombre(e.target.value);
+  };
+
+  const handleInputCorreo = (e) => {
+    cambiarInputCorreo(e.target.value);
+  };
+
+ 
+
+  const handleInputMsg = (e) => {
+    cambiarInputMsg(e.target.value);
+  };
   return (
     <div id="contacto" >
       <div className="Ct-container">
@@ -20,15 +79,15 @@ const Contacto = () => {
             </div>
           </div>
 
-          <form action="" className="form-2">
+          <form ref={form} onSubmit={sendEmail}  className="form-2">
             <div style={{ display: "flex", alignItems: "baseline" }}>
               <input
                 type="text"
                 name="nombre"
                 placeholder="Nombre"
                 id="nombre"
-                /*  value={inputNombre}
-            onChange={handleInputNombre} */
+                  value={inputNombre}
+            onChange={handleInputNombre} 
                 required
               />
 
@@ -37,8 +96,8 @@ const Contacto = () => {
                 name="email"
                 placeholder="Email"
                 id="email"
-                /*  value={inputNombre}
-            onChange={handleInputNombre} */
+                value={inputCorreo}
+                onChange={handleInputCorreo} 
                 required
               />
 
@@ -61,15 +120,19 @@ const Contacto = () => {
                 aria-required="true"
                 aria-invalid="false"
                 placeholder="Tu mensaje"
-                /*  value={inputMsg}
-            onChange={handleInputMsg} */
+                  value={inputMsg}
+            onChange={handleInputMsg} 
                 required
               />
 
-              <button className="btnForm" type="submit" value="Enviar">
-                {" "}
-                Enviar
-              </button>
+<input className="btnForm" type="submit" value="Enviar"          
+            />
+{/*             {sentForm && ( <div style={{display:'flex', color:'white', alignItems:'center'}}> 
+             
+             <p className="exito"> 
+             ¡Gracias por tu mensaje!</p></div>)
+
+} */}
             </div>
           </form>
         </div>
