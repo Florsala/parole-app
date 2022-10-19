@@ -817,6 +817,11 @@ button:focus-visible {
   body {
     font-size: 8px;
   }
+
+  .circleAnim{
+    overflow: hidden;
+    width: 50vw;
+  }
   .navbar-logos {
     margin-left: 2rem;
   }

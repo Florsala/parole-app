@@ -6,7 +6,7 @@ import read from "../assets/read.svg";
 import dots from "../assets/dots.svg";
 
 import {FiChevronDown,FiChevronUp} from "react-icons/fi";
-import Slider from "./Slider";
+import SliderC from "./SliderC";
 
 import line4 from "../assets/Line4.svg"
 
@@ -132,7 +132,7 @@ const Servicios = () => {
           <div className="Serv-circle-pink"></div>
         </div>
 
-       <Slider/>
+       <SliderC/>
 
       </section>
     </>

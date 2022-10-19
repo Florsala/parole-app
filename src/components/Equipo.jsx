@@ -9,26 +9,21 @@ import Daiana from "../assets/Equipo/Dai2-1.png";
 
 import { BsPaperclip } from "react-icons/bs";
 
-import line7 from '../assets/line7.svg'
+import line7 from "../assets/line7.svg";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import "../styles/Form.css";
 
-
-
-
 const Equipo = () => {
-
   useEffect(() => {
-    AOS.init({duration: 2000});
-  }, [])
-
+    AOS.init({ duration: 2000 });
+  }, []);
 
   return (
     <div
-    id="nosotros"
+      id="nosotros"
       style={{
         backgroundImage: `url(${dots})`,
 
@@ -43,7 +38,7 @@ const Equipo = () => {
         <div className="Eq-circle-dash"></div>
       </div>
       <div className="Eq-container-p">
-        <div className="Eq-container-p-box" >
+        <div className="Eq-container-p-box">
           <div className="box-img">
             <img src={Dana} alt="Dana Licht" />
             <div className="drop"></div>
@@ -59,8 +54,8 @@ const Equipo = () => {
           </div>
         </div>
 
-        <div className="Eq-container-p-box" >
-          <div className="box-img" >
+        <div className="Eq-container-p-box">
+          <div className="box-img">
             <img src={Lorena} alt="Lorena Nardi" />
             <div className="drop"></div>
           </div>
@@ -74,8 +69,8 @@ const Equipo = () => {
             </ul>
           </div>
         </div>
- 
-        <div className="Eq-container-p-box"   >
+
+        <div className="Eq-container-p-box">
           <div className="box-img">
             <img src={Daiana} alt="Daiana Perez" />
             <div className="drop"></div>
@@ -93,9 +88,8 @@ const Equipo = () => {
         </div>
       </div>
 
-
       <div className="trab-container">
-      <img src={line7} alt="" className="line7"/>
+        <img src={line7} alt="" className="line7" />
 
         <div className="trab-container-text">
           <h3>Trabajá con nosotros</h3>
@@ -127,13 +121,26 @@ const Equipo = () => {
             />
 
             <button className="btnForm" type="submit" value="Enviar">
-              {" "}
               Enviar
             </button>
 
-            <div style={{ marginRight: "auto", padding: "1rem", display:'flex' }}>
-            <BsPaperclip style={{    width: '1.5rem',color: 'white',height: '1.5rem'}}/>
-              <p className="cv"> Adjuntar CV</p>
+            <div
+              style={{ marginRight: "auto", padding: "1rem", display: "flex", flexDirection: "column" }}
+            >
+              <label className="cv">
+                
+                <span>
+                  <BsPaperclip
+                    style={{
+                      width: "1.5rem",
+                      color: "white",
+                      height: "1.5rem",
+                    }}
+                  />
+                </span>{" "}
+                Adjuntar CV
+              </label>
+              <input className="attach" type="file" name="my_file" />
             </div>
           </div>
         </form>
