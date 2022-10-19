@@ -136,7 +136,7 @@ const Equipo = () => {
             <div className="drop"></div>
           </div>
           <div className="box-text">
-            <h5>Daiana Perez Mamakiant</h5>
+            <h5>Daiana Perez Mamakian</h5>
             <ul>
               <li>Lic. en Gestión de Negocios.</li>
               <li>Técnica superior de RRHH.</li>
