@@ -4,20 +4,19 @@ import lineHome from "../assets/line-home.svg";
 
 import { HashLink as Link } from "react-router-hash-link";
 
-import { FiChevronsDown } from "react-icons/fi"; 
+import { FiChevronsDown } from "react-icons/fi";
 import { GoChevronDown } from "react-icons/go";
-import Numbers from '../components/Numbers';
+import Numbers from "../components/Numbers";
 
 import "../styles/circle-animation.css";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
-
-useEffect(() => {
-  AOS.init({duration: 2000});
-}, [])
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
 
   return (
     <div>
@@ -63,23 +62,21 @@ useEffect(() => {
           </Link>
         </div>
 
-        <div style={{overflow:"hidden", width:'100vw'}}>
+        <div className="circleAnim" >
           <div className="circle-1"></div>
-        <div className="circle-2"></div>
-        <div className="circle-3"></div>
-        <div className="circle-4"></div>
-        <div className="circle-5"></div>
-        <div className="circle-6"></div>
-        <div className="circle-7"></div>
+          <div className="circle-2"></div>
+          <div className="circle-3"></div>
+          <div className="circle-4"></div>
+          <div className="circle-5"></div>
+          <div className="circle-6"></div>
+          <div className="circle-7"></div>
         </div>
-        
       </section>
 
       <section id="inicio-2p">
         <div>
           <img className="lineHome" src={lineHome} alt="linea" />
         </div>
-       
 
         <div className="inicio2">
           <div data-aos="fade-right" className="Box-1">
@@ -108,9 +105,7 @@ useEffect(() => {
         </div>
       </section>
 
-      <Numbers/>
-
-      
+      <Numbers />
     </div>
   );
 };

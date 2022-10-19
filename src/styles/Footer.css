@@ -27,7 +27,6 @@
 
 .footer-icons img:hover{
 animation: bounce  1s ease-in-out;
-animation-direction: alternate;
 }
 
 @keyframes bounce {
@@ -35,7 +34,7 @@ animation-direction: alternate;
     transform: translateY(0);
   }
   100%{
-    transform: translateY(-0.5rem);
+    transform: translateY(-0.1rem);
   }
 }
 
@@ -68,7 +67,7 @@ animation-direction: alternate;
   background: var(--purple-color);
 
   position: absolute;
-  width: 84.3125rem;
+  width: 100vw;
   height: 6rem;
   left: 0rem;
 
@@ -92,3 +91,15 @@ animation-direction: alternate;
   height: 46.4375rem;
   transform: translate(3.8125rem, -42.6875rem);
 }
+
+
+@media only screen and (max-width: 599px) {
+
+.lineFooter{
+  width: 35.375rem;
+  height: 46.4375rem;
+  transform: translate(-0.1875rem, -42.6875rem);
+}
+
+}
+

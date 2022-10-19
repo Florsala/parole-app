@@ -1,14 +1,20 @@
+.circleAnim{
+  overflow: hidden;
+  width: 100vw;
+}
+
 .circle-1 {
   position: absolute;
-  width: 1.5625rem;
-  height: 1.5625rem;
+  width: 2rem;
+  height: 2rem;
   right: 30%;
   top: 25.3125rem;
   background: rgb(255,82,82);
+  opacity: 0.2;
   background: linear-gradient(0deg, rgba(255,82,82,0.742734593837535) 0%, rgba(255,82,86,0.11808473389355745) 100%);  border-radius: 50%;
 
 animation-delay: 5s;  
-animation: moving 12s ease infinite;
+animation: moving 15s ease infinite;
 }
 
 @keyframes moving {
@@ -19,10 +25,10 @@ animation: moving 12s ease infinite;
   }
 
   15% {
-    width: 12rem;
-    height: 12rem;
+    width: 8rem;
+    height: 8rem;
     opacity: 0.7;
-    transform: translateX(10px);
+    transform: translateX(0.625rem);
     rotate: (120deg);
   }
 
@@ -30,18 +36,18 @@ animation: moving 12s ease infinite;
 
   50% {
     opacity: 0.3;
-    transform: translateX(30px);
+    transform: translateX(1.875rem) translateY(1.25rem);
     rotate: (620deg);
   }
 
   75% {
     opacity: 0.5;
-    transform: translateX(50px);
+    transform: translateX(3.125rem) translateY(-13.75rem);
     rotate: (520deg);
   }
   100% {
     opacity: 0;
-    transform: translateY(-1000px);
+    transform: translateX(9.375rem) translateY(-62.5rem);
     rotate: (720deg);
   }
 }
@@ -53,9 +59,10 @@ animation: moving 12s ease infinite;
   width: 20rem;
   height: 20rem;
   border-radius: 50%;
+  opacity: 0.4;
   /* background: rgb(255,82,82); */
   background: linear-gradient(0deg, rgb(255 82 82 / 64%) 0%, rgba(255,82,86,0.11808473389355745) 100%);
-  animation: circleMove 10s cubic-bezier(0.4, 0, 1, 1) infinite;
+  animation: circleMove 15s cubic-bezier(0.4, 0, 1, 1) infinite;
   top: 26rem;
   animation-delay: 5s;
 }
@@ -71,11 +78,11 @@ animation: moving 12s ease infinite;
 
   25% {
     opacity: 0.5;
-    transform: translateX(-5px);
+    transform: translateX(-0.3125rem);
   }
   100% {
     opacity: 1;
-    transform: translateY(-800px);
+    transform: translateY(-50rem);
     rotate: (720deg);
   }
 }
@@ -85,9 +92,13 @@ animation: moving 12s ease infinite;
   opacity: 0.2;
   left: 20rem;
   height: 6rem;
+  opacity: 0.3;
   border-radius: 50%;
   background: rgb(255,82,82);
-  background: linear-gradient(0deg, rgba(255,82,82,1) 0%, rgba(255,82,86,0.11808473389355745) 100%);  animation: moving3 12s linear infinite;
+  background: linear-gradient(0deg, rgba(255,82,82,1) 0%, rgba(255,82,86,0.11808473389355745) 100%);  
+  animation: moving3 15s linear infinite;
+  animation-delay: 7s;
+
 }
 
 @keyframes moving3 {
@@ -99,7 +110,7 @@ animation: moving 12s ease infinite;
 
   100% {
     opacity: 0;
-    transform: translateY(-1000px);
+    transform: translateY(-62.5rem);
     rotate: (720deg);
   }
 }
@@ -108,7 +119,9 @@ animation: moving 12s ease infinite;
 
 .circle-3 {
   margin-left: 5rem;
-  opacity: 0;
+  opacity: 0.2;
+  animation: moving3 15s linear infinite;
+  animation-delay: 7s;
 }
 
 .circle-4 {
@@ -121,7 +134,7 @@ animation: moving 12s ease infinite;
   border-radius: 50%;
   border: 0.25rem dashed rgba(86, 22, 238, 0.2);
   animation: moving2 15s linear infinite;
-  animation-delay: 2s;
+  animation-delay: 8s;
 }
 
 @keyframes moving2 {
@@ -134,7 +147,7 @@ animation: moving 12s ease infinite;
 
   100% {
     opacity: 0;
-    transform: translateY(-1000px);
+    transform: translateY(-62.5rem);
   }
 }
 .circle-5 {
@@ -143,8 +156,10 @@ animation: moving 12s ease infinite;
   height: 5rem;
   opacity: 0.3;
   border-radius: 50%;
+  opacity: 0.4;
   background: var(--pale-pink);
-  animation: moving2 5s linear infinite;
+  animation: moving3 15s linear infinite;
+  animation-delay: 1s;
 }
 
 @keyframes moving2 {
@@ -157,14 +172,14 @@ animation: moving 12s ease infinite;
 
   100% {
     opacity: 0;
-    transform: translateY(-1000px);
+    transform: translateY(-62.5rem);
   }
 }
 
 .circle-6 {
   position: absolute;
-  width: 18.0625rem;
-  height: 16.1875rem;
+  width: 16rem;
+  height: 16rem;
 
   border-radius: 50%;
   border: 0.25rem dashed rgba(86, 22, 238, 0.15);
@@ -193,7 +208,7 @@ animation: moving 12s ease infinite;
 
   100% {
     opacity: 0;
-    transform: translateY(-1000px);
+    transform: translateY(-62.5rem);
     rotate: (720deg);
   }
 }

@@ -25,7 +25,7 @@ const ScrollToTop = () => {
   };
 
   return (
-    <div>
+    <div className="scroll-container">
       {backToTopButton && (
         <FiArrowUpCircle
           className="Scroll"

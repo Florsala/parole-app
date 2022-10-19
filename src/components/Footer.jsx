@@ -8,6 +8,8 @@ import Instagram from "../assets/media/instagram.svg";
 
 import Envelope from "../assets/envelope.svg";
 import lineFooter from "../assets/lineFooter.svg"
+
+
 const Footer = () => {
   return (
     <div>
