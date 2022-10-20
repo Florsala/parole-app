@@ -12,7 +12,9 @@ import lineFooter from "../assets/lineFooter.svg"
 
 const Footer = () => {
   return (
-    <div>
+    <>
+    
+    <div className="container-f">
       <div className="footer-container">
         <img className="logoFooter" src={Logo} alt="" />
 
@@ -55,6 +57,7 @@ const Footer = () => {
         </p>
       </div>
     </div>
+    </>
   );
 };
 
