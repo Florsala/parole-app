@@ -115,7 +115,7 @@ const Contacto = () => {
               <textarea
                 name="mensaje"
                 as="textarea"
-                cols="30"
+                cols="20"
                 rows="1"
                 aria-required="true"
                 aria-invalid="false"
