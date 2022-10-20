@@ -35,7 +35,7 @@ const Servicios = () => {
 
           <div className="Serv-box-content2">
             <h5 className="Serv-box-title">
-              Soft Skill Trainings para la Industria IT
+              Soft Skills Trainings para la Industria IT
             </h5>
 
             <div className={click ? "Serv-box-text2 open" : "Serv-box-text2"}>
